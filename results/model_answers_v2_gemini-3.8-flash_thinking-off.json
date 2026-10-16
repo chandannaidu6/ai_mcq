@@ -1,0 +1,77 @@
+{
+  "model_id": "gemini-3.8-flash",
+  "thinking_setting": "off",
+  "progress": "4/1005",
+  "complete": false,
+  "daily_limit_hit": true,
+  "n_valid_answers": 3,
+  "n_with_ground_truth": 2,
+  "n_correct": 2,
+  "accuracy_overall_pct": 100.0,
+  "results": [
+    {
+      "id": "s000_q0",
+      "category": "output",
+      "question_id": "21_22-3-1-python",
+      "answer_key": "C",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
+      "is_valid": true,
+      "is_correct": true,
+      "usage": {
+        "prompt_tokens": 240,
+        "output_tokens": 1,
+        "thoughts_tokens": 149
+      }
+    },
+    {
+      "id": "s000_q1",
+      "category": "edge_case",
+      "question_id": "21_22-3-1-python",
+      "answer_key": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
+      "is_valid": true,
+      "is_correct": true,
+      "usage": {
+        "prompt_tokens": 246,
+        "output_tokens": 1,
+        "thoughts_tokens": 70
+      }
+    },
+    {
+      "id": "s000_q2",
+      "category": "code_modification",
+      "question_id": "21_22-3-1-python",
+      "answer_key": "D",
+      "ground_truth_option": null,
+      "model_raw_output": "Wait, if `len(W) >",
+      "model_answer": "invalid",
+      "is_valid": false,
+      "is_correct": false,
+      "usage": {
+        "prompt_tokens": 353,
+        "output_tokens": 9,
+        "thoughts_tokens": 287
+      }
+    },
+    {
+      "id": "s000_q3",
+      "category": "loop_trace",
+      "question_id": "21_22-3-1-python",
+      "answer_key": "A",
+      "ground_truth_option": null,
+      "model_raw_output": "Wait, looking at the options: A) ",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": false,
+      "usage": {
+        "prompt_tokens": 248,
+        "output_tokens": 10,
+        "thoughts_tokens": 286
+      }
+    }
+  ]
+}

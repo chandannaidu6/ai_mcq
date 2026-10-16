@@ -1,0 +1,2852 @@
+[
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "DT7AUBV2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "2DXKHJJW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "2DXKHJJW",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "5XRZQT3Q",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "AZCUDUY3",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "JZTB6RAW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "JZTB6RAW",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "SW3OAVTI",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "JOUYKYF7",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "YGC572GZ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "NZJES6ZV",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "NZJES6ZV",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "I2RHNDKA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "7H5QQ662",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "7H5QQ662",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "7H5QQ662",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "7H5QQ662",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "5UQSXBL3",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "5UQSXBL3",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "TKGNRH4K",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "TKGNRH4K",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "MKLGNTNE",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "MKLGNTNE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "FMFB2ERW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "PN7ZRXGS",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "M6QPH7YO",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "M6QPH7YO",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "WIEPD2PU",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "3QD4AKHA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "XGEWE4P4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "H5KTW3EG",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "H5KTW3EG",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "H5KTW3EG",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "H5KTW3EG",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "H5KTW3EG",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "OTLDMOQQ",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "CT774TDG",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "SEATKBAK",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "SEATKBAK",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "SEATKBAK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "SEATKBAK",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "SEATKBAK",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "M6QPH7YO",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "M6QPH7YO",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "M6QPH7YO",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "VYSPL56W",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "VYSPL56W",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "7H5QQ662",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "LGHTWUYA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "C36JD6CE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "OBPWTTMQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "ZQ2MSLSY",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "ZQ2MSLSY",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "ZQ2MSLSY",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "NOIFUS3R",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "W37XN3FH",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "BJV6BLYS",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "G6RAJXPJ",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "G6RAJXPJ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "Y4K75FWO",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "Y4K75FWO",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "Y4K75FWO",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "Y4K75FWO",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "Y4K75FWO",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "5XRZQT3Q",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "5XRZQT3Q",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "FMFB2ERW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "YBMJXTHC",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "YBMJXTHC",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "YBMJXTHC",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "OTLDMOQQ",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "U7PTK7EK",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "U7PTK7EK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "4IIMNJUZ",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "4IIMNJUZ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "4IIMNJUZ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "C36JD6CE",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "Z4JWMWJA",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "Z4JWMWJA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "Z4JWMWJA",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "7H5QQ662",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "7H5QQ662",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "7H5QQ662",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "7H5QQ662",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "7H5QQ662",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "4PPDVAQT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "QTIMSZOL",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "L237FTUN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "L237FTUN",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "L237FTUN",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "L237FTUN",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "SEATKBAK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "OUOMG2M6",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "OUOMG2M6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "QPE27UEP",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "QPE27UEP",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "VM5CRFDU",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "VM5CRFDU",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "VM5CRFDU",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "VM5CRFDU",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "PFNSZINL",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "6FO3BSKN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "6FO3BSKN",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "6FO3BSKN",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "3QDYQU4I",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "3QDYQU4I",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "3QDYQU4I",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "4PPDVAQT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "6RPRP4IE",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "YGC572GZ",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "YGC572GZ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "YGC572GZ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "QKMIPPRK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "BVAP5NM4",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "QZJUI4XJ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "QZJUI4XJ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "PFNSZINL",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "PFNSZINL",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "PFNSZINL",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "PFNSZINL",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "PFNSZINL",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "G632BNLN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "AVCIKRRG",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "4AMCEGTP",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "4AMCEGTP",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "4AMCEGTP",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "4AMCEGTP",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "XGEWE4P4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "XGEWE4P4",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "56KIOCH6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "HEFP4VGQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "HEFP4VGQ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "G6RAJXPJ",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "5TRPAFPX",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "5TRPAFPX",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "LDR4Y4L3",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "YBMJXTHC",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "ZLV7YBN2",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "ZXV2TCG2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "3QD4AKHA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "XZTB374C",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "JOUYKYF7",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "JOUYKYF7",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "C36JD6CE",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "C36JD6CE",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "C36JD6CE",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "C36JD6CE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "C36JD6CE",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "Y76FRSZ6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "FEDGQJAI",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "FEDGQJAI",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "FEDGQJAI",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "HEFP4VGQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "HEFP4VGQ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "GUVEKSFT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "OBPWTTMQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "OBPWTTMQ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "JWVLXFOB",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "G632BNLN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "G632BNLN",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "QGYBAFER",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5SQ7WPEA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5SQ7WPEA",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5SQ7WPEA",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "2HRKTEF5",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "M6QPH7YO",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "PFNSZINL",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "VJM7JEP4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "5XRZQT3Q",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "5AQKFQBW",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "XLR3XUPE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "XLR3XUPE",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "XLR3XUPE",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "XLR3XUPE",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "JDQLQ5LT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "7XBTEU4B",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "PS3U2NU6",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "PS3U2NU6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "VKN6RGJ6",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XGEWE4P4",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XGEWE4P4",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XGEWE4P4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XGEWE4P4",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XGEWE4P4",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "LDR4Y4L3",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "LDR4Y4L3",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "4IIMNJUZ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "7H5QQ662",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "7H5QQ662",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "7H5QQ662",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "G632BNLN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "USKQ6WO3",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "USKQ6WO3",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "USKQ6WO3",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "USKQ6WO3",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "BJV6BLYS",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "BJV6BLYS",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "XARYUCPD",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "SEATKBAK",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "ZWD5JXGT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "ZWD5JXGT",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "Y3YJOVOH",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "2Y5M6RZI",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "6FO3BSKN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "6FO3BSKN",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "6FO3BSKN",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "6FO3BSKN",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "OMREAFIQ",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "QZJUI4XJ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "L237FTUN",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "2V5AQFDC",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "SRMT6YIX",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "6VODY7FT",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "6VODY7FT",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "6VODY7FT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "6VODY7FT",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "6VODY7FT",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "C6P7CKBX",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "C6P7CKBX",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JKHYPP7X",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JKHYPP7X",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JKHYPP7X",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JKHYPP7X",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "GVBWGUTT",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "J24DZKBZ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "J24DZKBZ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "BVAP5NM4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "4PPDVAQT",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "4PPDVAQT",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "4PPDVAQT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "4PPDVAQT",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "3QD4AKHA",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "3QD4AKHA",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "OUOMG2M6",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "OUOMG2M6",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OMREAFIQ",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "XBL4HF3H",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "BUQGY7N7",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "BUQGY7N7",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "BUQGY7N7",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "BUQGY7N7",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "BUQGY7N7",
+    "category": "variable_state",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "Y4K75FWO",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "5VESTZI2",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "5VESTZI2",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-2-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-2-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "21_22-2-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "7H5QQ662",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "7H5QQ662",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "4AI2JRC4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "4AI2JRC4",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "VYSPL56W",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "ZWD5JXGT",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "ZWD5JXGT",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "loop_trace",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "control_flow",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "call_count",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "LDR4Y4L3",
+    "category": "variable_state",
+    "reason": "no function-level entry point found (likely class-based task)"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "code_modification",
+    "reason": "could not build 3 distractors"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "4AI2JRC4",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "C36JD6CE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "C36JD6CE",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "R3NZURQV",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "C36JD6CE",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "loop_trace",
+    "reason": "no loop found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "control_flow",
+    "reason": "no if-statement found in entry function"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "5TRPAFPX",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "output",
+    "reason": "could not build 3 distinct distractors"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "ZV73W5DP",
+    "category": "variable_state",
+    "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "XARYUCPD",
+    "category": "code_modification",
+    "reason": "no comparison operator or non-trivial constant found to modify"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "XARYUCPD",
+    "category": "data_structure_state",
+    "reason": "no test with a list/dict-valued expected result found"
+  }
+]

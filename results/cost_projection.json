@@ -1,0 +1,67 @@
+{
+  "test_n": 20,
+  "full_n": 1005,
+  "sample_seed": 42,
+  "settings": {
+    "openai_gpt-6-luna_reasoning-none": {
+      "raw": {
+        "n_ok": 20,
+        "total_in": 9230,
+        "total_out": 80,
+        "total_reasoning": 0
+      },
+      "projection": {
+        "avg_input_tokens": 461.5,
+        "avg_output_tokens": 4.0,
+        "projected_cost_usd_standard": 0.04839075,
+        "projected_cost_usd_batch": 0.024195375
+      }
+    },
+    "openai_gpt-6-luna_reasoning-medium": {
+      "raw": {
+        "n_ok": 19,
+        "total_in": 8859,
+        "total_out": 1537,
+        "total_reasoning": 1457
+      },
+      "projection": {
+        "avg_input_tokens": 466.2631578947368,
+        "avg_output_tokens": 80.89473684210526,
+        "projected_cost_usd_standard": 0.08750905263157896,
+        "projected_cost_usd_batch": 0.04375452631578948
+      }
+    },
+    "gemini_3.8-flash_thinking-off": {
+      "raw": {
+        "n_ok": 9,
+        "total_in": 4589,
+        "total_out": 10,
+        "total_thoughts": 1487
+      }
+    },
+    "gemini_3.8-flash_thinking-on": {
+      "raw": {
+        "n_ok": 4,
+        "total_in": 1758,
+        "total_out": 3,
+        "total_thoughts": 722
+      }
+    },
+    "gemini_3.5-flash-lite_thinking-off": {
+      "raw": {
+        "n_ok": 16,
+        "total_in": 8784,
+        "total_out": 16,
+        "total_thoughts": 0
+      }
+    },
+    "gemini_3.5-flash-lite_thinking-on": {
+      "raw": {
+        "n_ok": 1,
+        "total_in": 356,
+        "total_out": 1,
+        "total_thoughts": 189
+      }
+    }
+  }
+}

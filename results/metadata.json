@@ -1,0 +1,37 @@
+{
+  "generator": {
+    "role": "question generator (Step 2)",
+    "model_name": "Claude Sonnet 5",
+    "model_id": "claude-sonnet-5",
+    "run_via": "Claude Code"
+  },
+  "run_started": "2026-10-16",
+  "hardware": {
+    "gpu": "NVIDIA RTX 4000 Ada Generation",
+    "gpu_vram_mib": 20475,
+    "driver_version": "580.126.18",
+    "python_version": "3.10.12"
+  },
+  "dataset": {
+    "name": "Dataset of Student Solutions to Algorithm and Data Structure Programming Assignments",
+    "citation": "Petersen-Frey, Soll, Kobras, Johannsen, Kling, Biemann -- LREC 2022, Universität Hamburg",
+    "reused_from_prior_run": true,
+    "sample_seed": 42,
+    "sample_size_v1": 25,
+    "sample_size_v2": 130,
+    "sample_v2_is_superset_of_v1": true
+  },
+  "budget_caps_usd": {
+    "anthropic": 9,
+    "openai": 9,
+    "gemini": 0
+  },
+  "known_blockers": [
+    {
+      "provider": "anthropic",
+      "status": "BLOCKED",
+      "detail": "CLAUDE_API_KEY in .env is a user-scoped key (prefix sk-ant-usr-...). All API calls (models.list AND messages.create) fail with: 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use.' Needs either a workspace-scoped key (prefix sk-ant-api03-...) or the workspace ID to pass as the anthropic-workspace-id header. Confirmed via direct API calls on 2026-10-16; not yet resolved.",
+      "pricing_still_recorded": true
+    }
+  ]
+}

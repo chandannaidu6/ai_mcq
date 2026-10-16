@@ -1,0 +1,227 @@
+[
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "DT7AUBV2",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def opt(W):\n    if len(W) < 2:\n        return W[0]\n    \n    a = W[0]\n    b = max(W[0],W[1])\n    for i in range(2,len(W)):\n        c = max(W[i]+a, b)\n        a = b\n        b = c\n            \n    return b",
+    "title_eng": "Billboard (Python)",
+    "task_description_plain_eng": "(This task is a slightly modified old exam task from the\nWS 2020/21)\n\nA company obtains permission to place billboards on one side of a road.\nAlong the $n \\in \\mathbb{N}$ kilometers long road, there are $n+1$ suitable\nlocations at intervals of exactly one kilometer. For the location at kilometer\n$i \\in\\{0,1, \\ldots, n\\}$ advertisers are willing to pay an amount $w_i$\nwith $0 < w_{i} < 10^9$ to the company. However, the road traffic regulation states\nthat there must be at least two kilometers between every two billboards.\nSo if the company places a billboard at kilometer $i$, then at kilometer $i-1$ and $i+1$\nno billboard may be placed.\n\nHelp the company determine a selection of locations that will\nmaximizes the total profit from renting the sites.\n\nInput: an array $W$ of size $n+1$ for a\n$n \\in \\mathbb{N} \\land 1 \\leq n \\leq 1000$.\n\nOutput: The maximum profit that can be obtained from the billboards.\n\nThe output must be calculated in $O(n)$.\n",
+    "skeleton": "def opt(W):\n    pass"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "OTLDMOQQ",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "# Node in parameter represents root of tree\ndef delete(root, delete):\n    if delete.left == None or delete.right == None:\n        y = delete\n    else:\n        y = t_min(delete.right)\n    if y.left != None:\n        x = y.left\n    else: x = y.right\n    if x!= None:\n        x.parent = y.parent\n    if y.parent == None:\n        root = x\n    else:\n        if y == y.parent.left:\n            y.parent.left = x\n        else:\n            y.parent.right = x\n    if y != delete:\n        delete.key = y.key\n    return root\n    \ndef t_min(node):\n    while node.left !=None:\n        node = node.left\n    return node",
+    "title_eng": "Search trees: Removal (Python)",
+    "task_description_plain_eng": "These tasks will again be about search trees. Reminder:\nOur search trees are built from \"nodes\", analogous to the lecture.\nA node looks like this:\n\nclass Node:\n * key\n * left\n * right\n * Parent\n\nFor this task, implement a method \"delete\" which deletes a\n\"Node\" in the search tree and returns the new search tree. Use the\nthe method from the lecture slides, i.e. the one with \"TREE-MINIMUM\".\nThe nodes can be reused as desired. The function gets the root\nof the search tree and the node to be deleted.\n",
+    "skeleton": "# Node in parameter represents root of tree\ndef delete(root, delete):\n    return None"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "2DXKHJJW",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "def calc(N,A):\n    Lengths = []\n    Connections = []\n\n    for i in range(N):\n        Lengths += [0]\n        Connections += [[]]\n\n    for e in A:\n        assert e[0] < e[1]\n        Connections[e[0]-1] += [e[1]-1]\n\n    for e in range(len(Connections)):\n        for u in Connections[e]:\n            Lengths[u] = max(Lengths[e] + 1, Lengths[u])\n\n    return max(Lengths)",
+    "title_eng": "Longest path DAG (Python)",
+    "task_description_plain_eng": "Input: A natural number $1 \\leq N \\leq 2500$, which indicates how many\nvertices the graph $G$ has, and a two-dimensional array $A$ of size\nsize $1 \\leq M \\leq 10^6$ of integers\n$A = [[a^{1}_1,a^{2}_1],[a^{1}_2,a^{2}_2],...,[a^{1}_M,a^{2}_M]]$ which is\nencodes the set of edges of $G$.  If $[a,b] \\in A$, then there is a\ndirected edge from the vertex $a$ to the vertex $b$. You may assume\nthat there are no directed cycles in $G$. For example: Let $N = 3$\nand $A = [[1,2],[2,3]]$ then the following graph is obtained:\n\n[]\n\nOutput: The length of the longest directed path in $G$.\nYour algorithm has to compute the solution in $O(N+M)$.\n\nTime limit: 1 CPU second\n\nHint:\n\n(1) The libraries java.util.Arrays, java.util.ArrayList, java.lang.Math\nare already imported automatically.\n\n(2) If you have difficulties with this task: Ignore\nthe runtime restrictions and first implement a naive \nrecursive solution. Then use dynamic programming\n(memoization) to achieve the desired runtime.\n\n(3) Some test cases have been hidden and are not displayed to\nprevent hardcoding of the solutions.",
+    "skeleton": "def calc(N,A):\n    pass"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "ZLV7YBN2",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def treewalk(root):\n    if root is not None:\n        treewalk(root.left)\n        treewalk(root.right)\n        return root\n\n# Node in parameter represents root of tree\ndef insert(root, insert):\n    x = root\n    y = None\n    while x is not None:\n        y = x\n        if insert.key < y.key:\n            x = x.left\n        else:\n            x = x.right\n    insert.parent = y\n    if y is None:\n        root = insert\n    elif insert.key < y.key:\n        y.left = insert\n    else:\n        y.right = insert\n\n    return treewalk(root)",
+    "title_eng": "Search trees: Insertion (Python)",
+    "task_description_plain_eng": "These tasks will be about search trees. Our search trees are built from\n\"nodes\", analogous to the lecture. A node looks like this:\n\nclass Node:\n * key\n * left\n * right\n * parent\n\nIn the lecture you have already seen an algorithm for searching in a search tree.\n\nYou are to implement different methods for the search trees.\nFor this task, implement a method \"insert\" that inserts a\n\"Node\" into the search tree and returns the new search tree.\nThe nodes can be reused as desired. The function\nis passed the root of the search tree and the new node.",
+    "skeleton": "# Node in parameter represents root of tree\ndef insert(root, insert):\n    return None"
+  },
+  {
+    "question_id": "19_20-6-2-python",
+    "student_id": "5XRZQT3Q",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def knapSack(value, volume, capacity):\n    assert len(value) == len(volume)\n\n    for x in volume:\n        assert x == round(x)\n    table = [[0 for x in range(capacity + 1)] for x in range(len(value) + 1)] \n  \n    # Build table table[][] in bottom up manner \n    for i in range(len(value) + 1): \n        for w in range(capacity + 1): \n            if i == 0 or w == 0: \n                table[i][w] = 0\n            elif volume[i-1] <= w: \n                table[i][w] = max(value[i-1] + table[i-1][w-volume[i-1]],  table[i-1][w]) \n            else: \n                table[i][w] = table[i-1][w] \n  \n    return table[len(value)][capacity]",
+    "title_eng": "Dynamic Programming: Knapsack (Python)",
+    "task_description_plain_eng": "The Knapsack problem is an optimization problem. Which items\nfrom an existing selection should be packed into a limited\nbackpack(Knapsack) in order to maximize the value to be transported?\nThis problem is in generall NP-complete and therefore\nprobably not efficiently solvable. Assuming that the\nvolumes of the objects are integers, we can find an algorithm\nthat solves this problem using dynamic programming. We are looking for\nthe implementation of an algorithm, which for a given list of objects and a\nlist of items and a maximum backpack volume outputs the value\nthat can be transported at most. The list of items\nconsists of two lists, one contains the volumes and one the values.\nvalues. So the input ([0.5, 0.3], [2, 5], 3 ) gives two items,\nthe first with volume 2 and value 0.5, the second with volume 5 and value 0.3.\nThe last value indicates the volume of the Knapsack, in this case\nthe correct output of the algorithm would be 0.5 because only\nthe 1st item fits into the backpack at all. With a larger volume\nof 7, the correct output would be 0.8. It is important to note that the solution\nis NOT 1.5, so it is not possible to use the same object more than once.",
+    "skeleton": "def knapSack(value, volume, capacity):\n    assert len(value) == len(volume)\n\n    for x in volume:\n        assert x == round(x)\n\n    # TODO\n\n    return 0"
+  },
+  {
+    "question_id": "20_21-3-1-python",
+    "student_id": "AZCUDUY3",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "def knapSack(value, volume, capacity):\n    assert len(value) == len(volume)\n\n    for x in volume: assert x == round(x)\n\n    tabelle = [[0.0 for x in range(capacity + 1)] for x in range(len(value) + 1)]\n    for i in range(len(value)+1): \n        for w in range(capacity+1):\n            if i == 0 or w == 0:\n                tabelle[i][w] = 0\n            elif volume[i-1] <= w:\n                if value[i-1] + tabelle[i-1][w-volume[i-1]] >= tabelle[i-1][w]:\n                    tabelle[i][w] = value[i-1] + tabelle[i-1][w-volume[i-1]]\n                else:\n                    tabelle[i][w] = tabelle[i-1][w]\n            else: \n                tabelle[i][w] = tabelle[i-1][w]\n    return (tabelle[len(value)][capacity])",
+    "title_eng": "Knapsack (Python) (revised version 2020/21)",
+    "task_description_plain_eng": "",
+    "skeleton": "def knapSack(value, volume, capacity):\n    assert len(value) == len(volume)\n\n    for x in volume:\n        assert x == round(x)\n\n    # TODO\n\n    return 0"
+  },
+  {
+    "question_id": "21_22-1-1-python",
+    "student_id": "JZTB6RAW",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def calc(n):\n\n    n_int = int(n) % 1000000007\n\n    split = 512\n\n    if n_int == 0:\n        return 0\n\n    mod = n_int % split\n\n    n_gerade = (n_int-mod)//split\n    return (pow(pow(2,n_gerade) % 1000000007, split) * pow(2, mod) - 1) % 1000000007",
+    "title_eng": "Divide and Conquer Recurrence [Python]",
+    "task_description_plain_eng": "Input: $n_0 \\in \\mathbb{N}_0: \\; 0 \\leq n_0 \\leq 10^{9}$ \n\nOutput: $a_{n_0} \\; mod \\; 10^9+7$ with\n$a_{n+1}=2 a_{n}+1 \\; \\; n \\in \\mathbb{N}_0, a_{0}=0$\n\nCalculate in $O(\\: log \\: n)$ the output for any input\nin the function \"def calc(n):\" that takes only an integer as a parameter.\nFor the implementation you must not use the keyword\n\"import\", \"**\", \"eval\" , \"checkCalc\", \"globals\", \"pow\" or \"expo\".\n\nFor easier debugging, you can divide your result in each calculation step by modulo $10^9+7$. For example:\n\ndef calc(a,b,c):\n\n    res = (a+b) % 10000007\n\n    res = (res+c) % 10000007\n\n    return (res+1000) % 10000007\n\nHints:\n\n1. Find a closed form for the recurrence.\n\n2. Use \"//\" (without the quotation marks) to perform integer division in\nPython and to avoid floats.\n\n3. If $b$ is even, then:\n\n$a^b = (a^{\\frac{b}{2}})^2 = a^{\\frac{b}{2}} \\cdot a^{\\frac{b}{2}}$\n\nIf $b$ is odd, then:\n\n$a^b = a^{b-1} \\cdot a$  \n",
+    "skeleton": "def calc(n):\n    pass"
+  },
+  {
+    "question_id": "21_22-2-2-python",
+    "student_id": "QGYBAFER",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def calc(a,b):\n    s = [0] * len(b)\n    c = [0] * len(a)\n    c[0] = a[0]\n    for i in range(1,len(a)):\n        c[i] = a[i] + c[i-1]\n    for i in range(len(b)):\n        l = ((b[i])[0])\n        r = ((b[i])[1])\n        if l == r:\n            s[i] = a[l]\n        elif l == 0:\n            s[i] = c[r]\n        else:\n            s[i] = c[r] - c[l-1]\n    return s",
+    "title_eng": "Transporting Goods (Python)",
+    "task_description_plain_eng": "In a large warehouse, one robot is responsible for transporting\ngoods from warehouse X to warehouse Y. The robot worked $n$ days.\nOn the $i-$th (for $0\\leq i\\leq n-1$) day, the robot moved $x_i$ goods\nfrom the first warehouse to the second warehouse. These values are stored in a\nlist of length $n$ of non-negative integers:\n$A = [x_0,...,x_{n-1}]$. Now we want to process a list of\nqueries $B = [(l_1,r_1),...,(l_n,r_n)]$. \n\nFor this one would like to know how many goods the robot has tranported between the days\n$l_i$ and $r_i$ with $0\\leq l_i \\leq r_i \\leq n-1$ for\n$1\\leq i\\leq n$. Here $[l_i,r_i]$ forms a closed\ninterval. For example, for $A = [x_0,x_1] = [4,5]$ and queries\n$B =[(l_1,r_1),(l_2,r_2)] = [(1,1),(0,1)]$ we get\n$[\\sum_{i=l_1}^{r_1}x_i,\\sum_{i=l_2}^{r_2}x_i] = [\\sum_{i=1}^{1}x_i,\\sum_{i=0}^{1}x_i] = [5, 4 + 5]$.\n\nSo for each query, we want to return a list of the following\nform:\n\n$[\\sum_{i=l_1}^{r_1}x_i,...,\\sum_{i=l_n}^{r_n}x_i]$. This calculation\nshall be done in $O(n)$.\n\nThe string \"check_calc\" or \"eval\" must not appear in your solution.\n\nInput: a list of length $n$ of non-negative integers:\n$A = [x_0,...,x_{n-1}]$ and a list of two-tuples of length\n$O(n)$ $B = [(l_1,r_1),...,(l_n,r_n)]$ with $0\\leq l_i \\leq r_i \\leq n-1$\nfor $1\\leq i\\leq n$).\n\nOutput: A list of length $n$ of non-negative integers:\n\n$[\\sum_{i=l_1}^{r_1}x_i,...,\\sum_{i=l_n}^{r_n}x_i]$ computed in $O(n)$.\n\nHere the string \"check_calc\" or \"eval\" must not appear in your solution\n\nNote: Let $l_j \\geq 1$. Then: \n\n$\\sum_{i=l_j}^{r_j}x_i= \\sum_{k=0}^{r_j}x_k - \\sum_{k=0}^{l_j - 1}x_k$ ",
+    "skeleton": "def calc(a,b):\n    return []"
+  },
+  {
+    "question_id": "19_20-5-1-python",
+    "student_id": "SW3OAVTI",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "import queue\n\ndef bfs(graph, start):\n    a = queue.Queue()\n    a.put(start)\n    result = []\n    while not a.empty():\n        current = a.get()\n        for x in graph[current]:\n            a.put(x)\n        graph[current] = []\n        if current not in result:\n            result.append(current)\n    return result",
+    "title_eng": "Graphs: BFS (Python)",
+    "task_description_plain_eng": "This task is about the implementation of graphs and very\nsimple graph algorithms. In Java we implement graphs with the\nthe help of arrays. We look at graphs with unweighted edges.\nTo represent a graph in Java, we give all nodes a number (starting with 0),\nwhich corresponds to the index of the adjacency list in the list. Example:\n\ngraph = [\n    [1, 2],\n    [0],\n    [1]\n]\n\nEach of these edges can now be considered as directed, going out\nfrom the node with the index number to the node with the corresponding\nnumber (see image for a graphical visualization).\n\nNow we want to implement some simple algorithms for the graphs,\nstarting with breadth-first search. How this\nalgorithm works can be found in the lecture, see also Cormen et\nal, chap. 22. The inputs are assumed to be unweighted, directed graphs,\nso it is not always the case that for each edge there is also a back edge\nrunning in the opposite direction.\n\nThe outputs shall contain the nodes of the graph in the order\nas they are processed by the corresponding search.\nThe nodes are to be traversed in the order in which they are arranged in the adjacency list.",
+    "skeleton": "def bfs(graph, start):\n    return []"
+  },
+  {
+    "question_id": "20_21-2-1-python",
+    "student_id": "JOUYKYF7",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "def calc(A, B):\n    s = \"\"\n    count = {}\n    for i in A:\n        if i in count:\n            count[i] += 1\n        else:\n            count[i] = 1\n    for i in range(len(B)):\n        try:\n            if count[i] <= B[i]:\n                s += \"1\"\n            else:\n                s += \"0\"\n        except KeyError:\n            s += \"1\"\n    return s",
+    "title_eng": "Logistics at the North Pole (Python)",
+    "task_description_plain_eng": "Input: Two arrays $A = [a_1, a_2,...,a_n], B = [b_1, b_2, ..., b_m]$\nmit  $1 \\leq m, n  \\leq 4 \\cdot 10^6$\nand $\\forall 1\\leq i  \\leq n:  0 \\leq a_i,b_i  \\leq 10^6$.\nMoreover, $\\max(A) \\leq |B| - 1$\n\nOutput:  A binary string $s$ of length $m$ , where the $i$-th digit is\nis defined as follows:\n\n$s[i] = \\begin{cases} 1, &\\text{if } |A|_i \\leq B[i] \\ 0, &\\text{if } |A|_i > B[i] \\end{cases}$\n\nwhere $|A|_i$ describes how often the number $i$ occurs in the array $A$.\n\nTimelimit: 5 CPU seconds\n\nIt is Christmas and Santa Claus has little time left: He must\ncome up with a system to deliver all presents in time.\nFor this he uses the following system: First, all the cuddly\ntoys are delivered, then all books, and so on. The category of the\n$i-$th gift is $A[i]$. Unfortunately Santa's sleigh does not\nhave an infinitely large capacity: For objects of the\ncategory $i$, Santa's sleigh has a maximum capacity of $B[ i]$.\nNow he would like to know if it is possible to deliver all objects of a\ncategory in one run. For this he wants\nyou to generate a string with the following properties:\nthe $i$-th digit is a one if it is possible to deliver all objects of the\ncategory $i$ in one pass and $0$ if this is not possible.\nAs a reminder, Santa Claus can deliver all objects of the\ncategory $i$ in one pass if $|A|_i \\leq B[i]$ holds.\nSince Santa does not have much time left, your algorithm must have\na run time of $O(n + m)$.\n\nHint:\n\n(1) The substring \"import\", \"eval\",\"sort\", \"sol_calc\" or \"getattr\" must\nnot appear in your solution. \n\n(2) Unlike defined in Cormen, arrays and strings of length\n$n$ start at 0 and end at $n-1$.",
+    "skeleton": "def calc(A,B):\n    pass"
+  },
+  {
+    "question_id": "21_22-2-1-python",
+    "student_id": "YGC572GZ",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def calc(A,B):\n    for i in A:\n        B[i] = B[i]-1\n    s = \"\"\n    for i in B:\n        if i <0 :\n            s = s+\"0\"\n        else: \n            s = s+\"1\"\n    return s",
+    "title_eng": "Logistics at the North Pole (Python)",
+    "task_description_plain_eng": "It's Christmas and Santa Claus has little time left: he must\nto come up with a system to deliver all the presents on time.\nTo do this, he uses the following system: first, all the cuddly\ntoys are delivered, then all the books, and so on. The category of the\n$i-$th gift is $A[i]$. Unfortunately the sleigh of\nSanta Claus does not have an infinitely large capacity: For objects of the\ncategory $i$, Santa's sleigh has a maximum capacity of $B[ i]$.\nNow he would like to know if it is possible to deliver all the\nobjects of a category in one run. For this he wants\nyou to generate a string with the following properties:\nthe $i$-th digit is a one, if it is possible to deliver\nall objects of the category $i$ in one pass and $0$,\nif this is not possible. As a reminder, Santa Claus can\ndeliver all objects of category $i$ in one pass,\nif $|A|_i \\leq B[i]$ holds. Since Santa does not have much time left\nyour algorithm must have a runtime of $O(n + m)$.\n\nInput: Two arrays $A = [a_1, a_2,...,a_n], B = [b_1, b_2, ..., b_m]$\nwith $1 \\leq m, n \\leq 4 \\cdot 10^6$\nand $\\forall 1\\leq i \\leq n: 0 \\leq a_i,b_i \\leq 10^6$. Furthermore\nit holds: $\\max(A) \\leq |B| - 1$\n\nOutput:  A binary string $s$ of length $m$ , where the $i$-th digit is\nis defined as follows:\n\n$s[i] = \\begin{cases} 1, &\\text{when } |A|_i \\leq B[i] \\ 0, &\\text{when } |A|_i > B[i] \\end{cases}$\n\nwhere $|A|_i$ describes how many times the number $i$ occurs in the array $A$.\n\nTimelimit: 5 CPU seconds\n\nHint:\n\n(1) The substring \"import\", \"eval\", \"sort\", \"sol_calc\", or \"getattr\"\nmust not appear in your solution. \n\n(2) Unlike defined in Cormen, arrays and strings of length\n$n$ start at 0 and end at $n-1$ .\n",
+    "skeleton": "def calc(A,B):\n    pass"
+  },
+  {
+    "question_id": "20_21-1-1-python",
+    "student_id": "WURVTKED",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "def expo(a,b,c):\n    return pow(a,b,c)\n\n\n'''\ndef addiere(a,b,c,d,e):\n\n    res = (a+b) % 1000000007\n\n    res = (res+c) % 1000000007\n\n    res = (res+d) % 1000000007\n\n    res = (res+e) % 1000000007\n\n    return (res+1000) % 1000000007\n'''",
+    "title_eng": "Exponentiation by squaring (Python)",
+    "task_description_plain_eng": "Input: $a,b,c \\in \\mathbb{N}_0  \\land 1 \\leq a \\leq 100 \\land 0 \\leq b \\leq 10^9 \\land 1 \\leq c \\leq 10^{10}$\n\nOutput: $a^b \\; mod \\; c$\n\nLet $a^b \\; mod \\; c$ be calculated in the function expo(a,b,c). Make sure\nthat your algorithm has a run time of $O(log \\; b + log \\; c)$.\nYour solution must not contain the string \"import\" and \"**\" as a\nsubstring. For easier debugging, you can divide your result\nin each calculation step by modulo $c$. For example (The example\ncan also be found commented out in the answer field):\n\ndef add(a,b,c,d,e):\n    res = (a+b) % 10000007\n    res = (res+c) % 10000007\n    res = (res+d) % 10000007\n    res = (res+e) % 10000007\n    return (res+1000) % 10000007\n\nHint:\n\nUse \"//\" (without the quotes) to perform integer division in\nPython and to avoid floats.\n\nIf $b$ is even, then:\n\n$a^b = (a^{\\frac{b}{2}})^2 = a^{\\frac{b}{2}} \\cdot a^{\\frac{b}{2}}$\n\nIf $b$ is odd, then:\n\n$a^b = a^{b-1} \\cdot a$",
+    "skeleton": "def expo(a,b,c):\n    pass\n\n\n'''\ndef addiere(a,b,c,d,e):\n\n    res = (a+b) % 1000000007\n\n    res = (res+c) % 1000000007\n\n    res = (res+d) % 1000000007\n\n    res = (res+e) % 1000000007\n\n    return (res+1000) % 1000000007\n'''"
+  },
+  {
+    "question_id": "19_20-2-1-python",
+    "student_id": "7H5QQ662",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "class Queue:\n    \"\"\"Klasse, die eine selbstgebaute Queue darstellt.\n    \"\"\"\n    def __init__(self):\n        self.elements: list = list()\n\n    def isEmpty(self):\n        \"\"\"Prueft, ob die Queue leer ist.\n        :return: True, wenn die Queue leer ist;\n            False, sonst\n        \"\"\"\n        if len(self.elements) == 0:\n            return True\n        return False\n\n    def head(self):\n        \"\"\"Gibt den Wert des ersten Elements in der Queue\n            zurueck.\n        :return: Den Wert des ersten Elementes in der Queue\n        \"\"\"\n        if len(self.elements) > 0:\n            return self.elements[0]\n        else:\n            raise IndexError\n\n    def enqueue(self, x):\n        \"\"\"Haengt ein Element an die Queue an.\n        :param x: Anzuhaengendes Element\n        \"\"\"\n        if len(self.elements) < 100:\n            self.elements.append(x)\n        else:\n            raise IndexError\n\n    def dequeue(self):\n        \"\"\"Entfernt das erste Element aus der Queue\n        :return: Erstes Element\n        \"\"\"\n        if len(self.elements) > 0:\n            return self.elements.pop(0)\n        else:\n            raise IndexError",
+    "title_eng": "Queue (Python)",
+    "task_description_plain_eng": "Implement a class \"Queue\" that works like a queue (as described in the\nthe lecture). The class should have at least the\nmethods isEmpty(), head(), enqueue(x) and dequeue(). The\nqueue does not need to hold more than 100 elements.\n\nNote 1: In the Java test, the stack is expected to store \"strings\".\nSince Python is dynamically typed, this does not apply.\n\nNote 2: It is not allowed to use \"import\"!",
+    "skeleton": "class Queue:\n    \"\"\"Klasse, die eine selbstgebaute Queue darstellt.\n    \"\"\"\n\n    def isEmpty(self):\n        \"\"\"Prueft, ob die Queue leer ist.\n        :return: True, wenn die Queue leer ist;\n            False, sonst\n        \"\"\"\n        pass\n\n    def head(self):\n        \"\"\"Gibt den Wert des ersten Elements in der Queue\n            zurueck.\n        :return: Den Wert des ersten Elementes in der Queue\n        \"\"\"\n        pass\n\n    def enqueue(self, x):\n        \"\"\"Haengt ein Element an die Queue an.\n        :param x: Anzuhaengendes Element\n        \"\"\"\n        pass\n\n    def dequeue(self):\n        \"\"\"Entfernt das erste Element aus der Queue\n        :return: Erstes Element\n        \"\"\"\n        pass"
+  },
+  {
+    "question_id": "20_21-1-2-python",
+    "student_id": "XBL4HF3H",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "SENTINEL = float(\"inf\")     # Wächter\n\ndef merge(A, l, q, r):\n    n1 = q - l + 1          # die Länge des linken Teils\n    n2 = r - q              # -\"-           rechten\n    L = [None] * (n1+1)     # leere Teil-Listen erstellen, +1 für den Wächter\n    R = [None] * (n2+1)     # \n    for i in range(n1):\n        L[i] = A[l+i]       # Teil-Listen befüllen\n    for i in range(n2):\n        R[i] = A[q + 1 + i] \n    L[n1] = SENTINEL        # Wächter hinzufügen\n    R[n2] = SENTINEL\n    i,j = 0,0               # Zähler für Teil-Listen\n    for k in range(l, r+1): # r+1, damit mit den Wächtern verglichen wird\n        if(L[i] <= R[j]):   # der eigentliche Merge-Teil\n            A[k] = L[i]\n            i += 1\n        else:\n            A[k] = R[j]\n            j += 1\n\ndef mergeSort(A, l, r):\n    if(l < r):\n        m = (l + r) // 2    # Mitte bestimmen \n        mergeSort(A, l, m)  # Rekursion für die linke Seite\n        mergeSort(A, m+1, r)# Rekursion für die rechte Seite\n        merge(A, l, m, r)   # Zusammenfügen der beiden Seiten\n    \ndef solution(A):\n    l = 0                   # Index für das erste\n    r = len(A) - 1          # und das letzte Element\n    mergeSort(A, l, r)      # mergeSort starten\n    return A",
+    "title_eng": "Sorting (Python)",
+    "task_description_plain_eng": "Input: An array $A = [a_1, a_2,...,a_n]$ with $2 \\leq n \\leq 10^6$\nand $\\forall 1\\leq i \\leq n: -10^6 \\leq a_i \\leq 10^6$\n\nOutput:  Array A sorted in ascending order: $A = [a_1, a_2,...,a_n]$,\nwhere $\\forall 1 \\leq i \\leq j \\leq n: \\; a[i] \\leq a[j]$\n\nImplement a sorting procedure in the function \"solution\", which takes\nas argument an array \"A\".  Your procedure should\neither have a worst-case run time of $O(n \\; log \\; n)$ or an\naverage-case run time of $O(n \\; log \\; n)$ (this should be guaranteed by\nrandomization). Your solution must not contain the string\n\"sort\" and \"numpy\" as substring. Importing the random\nlibrary is explicitly allowed!\n\nHint:\n\nMake absolutely sure that you randomize your algorithm using the\nPython Random Library. You can ignore this hint\nif your implementation has a worst-case runtime of $O(n \\; log \\; n)$.",
+    "skeleton": "def solution(A):\n    pass"
+  },
+  {
+    "question_id": "19_20-2-2-python",
+    "student_id": "NZJES6ZV",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def Calculator(inputarray, stack):\n    for c in inputarray:\n        num = None\n        operand = None\n        try:\n            num = int(c)\n            stack.push(num)\n            \n        except ValueError:\n            operand = c\n            num2 = stack.pop()\n            num1 = stack.pop()\n            result = None\n            if operand == '+':\n                result = num1 + num2\n            elif operand == '-':\n                result = num1 - num2\n            elif operand == '*':\n                result = num1 * num2\n            elif operand == '/':\n                result = num1 // num2\n            \n            stack.push(result)\n    return stack.pop()",
+    "title_eng": "Stack (Python)",
+    "task_description_plain_eng": "The Reverse Polish Notation / Postfix Notation is a special notation for\nfor mathematical expressions, where the numbers are given first, followed by the\noperators. The expression (1 * 2)+(3 * 4) would be 1 2 * 3 4 * + in this notation.\n\nA calculator for this notation can be represented well with the help of a stack.\nThe notation is processed from left to right.\nIf a number is processed, it is put on the stack.\nIf an operator is encountered, then the uppermost two numbers are taken from the stack,\nthe operator is executed and the result is put back on the stack.\nAfter the calculation, the result is the only number on the stack.\n\nIn this task you are asked to implement such a calculator in a method.\nIt should be able to process the operators plus (+), minus (-), times (*)\nand division (/, rounded down). You will receive a stack with the following\nknown methods, which you have to use in your implementation:\n\n* emptystack()\n* head()\n* push(int i)\n* pop()\n\nThe method receives as input a list of strings in which the\nnumbers and operators are already separated (e.g..: input =\n[\"1\", \"2\", \"*\", \"3\", \"4\", \"*\", \"+\"]). Strings can be converted with \"int(myString)\".\nYou will also get a stack, which you should use.\nThe method should return the correct result as an integer.\n\nYou can assume that the input is a correct formula.\n",
+    "skeleton": "def Calculator(inputarray, stack):\n    return 0"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "I2RHNDKA",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def calc(f):\n    n=0\n    r=10**18\n    while r-n>=2:\n        c=(n+r)//2\n        if not f(c):\n            n=c\n        else:\n            r=c\n    return r",
+    "title_eng": "Divide and Conquer Function [Python]",
+    "task_description_plain_eng": "Let $N \\in \\mathbb{N} \\land N \\leq 10^{18}$ and\n$f_N:\\mathbb{N}_0 \\mapsto \\{0,1\\}, \\; n \\mapsto \\begin{cases}1, & \\text { if } n \\geq N \\ 0, & \\text { if } n < N \\end{cases}$\na binary function, where $N$ is unknown. The goal of the task is to calculate $N$ \nin $O(log \\: n)$.\n\nInput: A binary function $f_N$, where $N$ is unknown.\n\nOutput: $N$.\n\nThe function $f_N$ is available as argument in the\nimplementation.  For the implementation you must not use the keyword\n\"import\" , \"globals\" or \"eval\". Calculate the output\nin $O(log \\: n)$ in the function \"calc(f)\".\n\nHints:\n\n1. Analyze the monotonicity of the function.\n\n2. Let $x \\in \\mathbb{N}$ with $f_N(x) = 0$. What do we know for all\nvalues $y \\in \\mathbb{N}, y < x$? Now let $f_N(x) = 1$. What do we know\nfor all values $z \\in \\mathbb{N}, x < z$?\n",
+    "skeleton": "def calc(f):\n    pass"
+  },
+  {
+    "question_id": "19_20-5-2-python",
+    "student_id": "Y3YJOVOH",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def dfs(graph, start):\n    visited = list()\n    besucht = list()\n    for i in range(len(graph)):\n        visited.append(False)\n    def dfs_visit(start):\n        visited[start] = True\n        besucht.append(start)\n        for v in graph[start]:\n            if visited[v] == False:\n                dfs_visit(v)\n    dfs_visit(start)\n    return (besucht)",
+    "title_eng": "Graphs: DFS (Python)",
+    "task_description_plain_eng": "As a second algorithm - analogous to the first task - a depth\ndepth-first search is to be implemented.\n\nHere, too, the nodes are to be visited in the order in which they appear in the adjacency list.",
+    "skeleton": "def dfs(graph, start):\n    return []"
+  },
+  {
+    "question_id": "19_20-6-1-python",
+    "student_id": "ZLV7YBN2",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def edelta_evaluate(edelta,i,j,u,v):\n  if i == 0:\n    return j\n  if j == 0:\n    return i\n  if u[i-1] == v[j-1]:\n    repcost = 0\n  else:\n    repcost = 1\n  return min([edelta[i-1][j-1] + repcost,\n              edelta[i-1][j] + 1,\n              edelta[i][j-1] + 1])\n\ndef editDistance(u, v):\n  m = len(u)\n  n = len(v)\n  edelta = [[None] * (n+1) for i in range(m+1)]\n  for i in range(m+1):\n    for j in range(n+1):\n      edelta[i][j] = edelta_evaluate(edelta,i,j,u,v)\n  return edelta[m][n]",
+    "title_eng": "Dynamic Programming: Edit Distance (Python)",
+    "task_description_plain_eng": "In this task the edit distance of two given strings is implemented.\nThis is defined as the minimum number of insert, delete and replace operations\nof single characters to convert the one string into the other.\nImportant: The implementation must NOT use recursive calls.",
+    "skeleton": "def editDistance(a, b):\n    return 0"
+  },
+  {
+    "question_id": "19_20-1-1-python",
+    "student_id": "7H5QQ662",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def LCM(a: int, b: int) -> int:\n    return (a * b) / GCD(a, b)\n\ndef GCD(a: int, b: int) -> int:\n    if (a % b) == 0:\n        return b\n    return GCD(b, a % b)",
+    "title_eng": "LCM -- Least Common Multiple (Python)",
+    "task_description_plain_eng": "Similar to the already known \"Greatest Common Divisor\" (GCD),\nthe Least Common Multiple (LCM) is also used in elementary mathematical\napplications, for example in the multiplication of heterogeneous fractions. This\nhas applications ranging from the adaptation of cooking recipes to other\nportion quantities to the calculation of planetary orbits.\n\nThe LCM is defined as follows:\n$lcm(n_1, n_2)=\\frac{n_1 \\cdot n_2}{gcd(n_1,n_2)}$.\n\nImplement a function that calculates the LCM of two given values.\nIt may be based on the GCD implementation from the lecture.\n\nNote: The use of \"import\" is not allowed.",
+    "skeleton": "def LCM(a, b):\n    pass"
+  },
+  {
+    "question_id": "19_20-3-1-python",
+    "student_id": "6RPRP4IE",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "def listSorter(listToSort: ListToSort) -> ListToSort:\n    for i in range (0,listToSort.Length()-1):\n        noswap = True\n        for j in range (listToSort.Length()-1,i,-1):\n            if listToSort.Smaller(j,j-1):\n                listToSort.Swap(j,j-1)\n                noswap = False\n        if noswap:\n            break\n    return listToSort",
+    "title_eng": "List Sorting (Python)",
+    "task_description_plain_eng": "Implement any search algorithm from the lecture\nthat sorts the given list.\n\nThe list has the following operations, which get as input indexes of the\nlist elements:\n\n* Swap(int x, int y) <- Swaps the items at position x and y.\n\n* Larger(int x, int y) <- Returns true if the item at\nposition x is greater than the item at position y\n\n* Smaller(int x, int y) <- Returns true if the item at\nposition y is greater than the element at position x\n\n* Equal(int x, int y) <- Returns true if the element at\nposition y is equal to the element at position x\n\n* Length() <- Returns the length of the list\n",
+    "skeleton": "def listSorter(listToSort: ListToSort) -> ListToSort:\n    pass"
+  },
+  {
+    "question_id": "21_22-3-2-python",
+    "student_id": "5UQSXBL3",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "class KnotenImKopf:\n    def __init__(self, wert: int):\n        self.wert = wert\n        self.farbe = \"w\"\n        # self.vater = None\n        # self.d = None\n        # self.f = None\n        self.adj = []\n\n    def append_to_adj(self, wert: int) -> None:\n        self.adj.append(wert)\n\n\ndef dfs(knoten: list) -> list:\n    # global zeit\n    # zeit = 0\n    endzeit_list = []\n\n    for u in knoten[1:]:  # s. Init. von knoten\n        if u.farbe == \"w\":\n            dfs_visit(knoten, u, endzeit_list)\n    return endzeit_list\n\n\ndef dfs_visit(knoten: list, u: KnotenImKopf, endzeit_list: list) -> None:\n    # global zeit\n    # zeit += 1\n    # u.d = zeit\n    u.farbe = \"g\"\n    for v_value in u.adj:\n        v = knoten[v_value]\n        if v.farbe == \"w\":\n            # v.vater = u.wert\n            dfs_visit(knoten, v, endzeit_list)\n    # u.farbe = \"s\"\n    # zeit += 1\n    # u.f = zeit\n    endzeit_list.append(u.wert)\n\n\ndef calc(n: int, a: list) -> int:\n    knoten = [KnotenImKopf(i) for i in range(n + 1)]  # 0-ter Knoten ist PLatzhalter\n    for e in a:\n        knoten[e[0]].append_to_adj(e[1])\n    e_list = dfs(knoten)\n    longest_path = [0] * (n + 1)\n\n    for value in e_list:\n        u = knoten[value]\n        for v in u.adj:\n            longest_path[value] = max(longest_path[value], longest_path[v] + 1)\n\n    return max(longest_path)",
+    "title_eng": "Longest path DAG (Python)",
+    "task_description_plain_eng": "The goal of this task is to find the longest path in the dag (directed acyclic\ngraph) in $O(N+M)$. \n\nInput: A natural number $1 \\leq N \\leq 2500$, which indicates how many\nnodes the graph $G$ has. A two dimensional array $A$ of the\nsize $1 \\leq M \\leq 10^6$ of integers\n$A = [[a^{1}_1,a^{2}_1],[a^{1}_2,a^{2}_2],...,[a^{1}_M,a^{2}_M]]$, which\nencodes the node and edge set of $G$.  If $[a,b] \\in A$, then\nthere is a directed edge from the node$a$ to the node $b$. You\nmay assume that there are no directed cycles in $G$. An\nexample: let $N = 3$ and the edges $A = [[1,2],[2,3]]$ then the result is\nthe following graph:\n\n[]\n\nOutput: The length of the longest directed path in $G$.\nYour algorithm must compute the solution in $O(N+M)$.\n\nTime limit: 4 CPU seconds ($O(N+M)$ ).\n\nHint:\n\n(1) The substring \"import\", \"eval\", \"sol_calc\", or \"getattr\" must not\nappear in your solution. \n\n(2) If you have difficulties with this task: Ignore\nthe runtime restrictions and first implement a naive \nrecursive solution. Then use dynamic programming\n(memoization) to achieve the desired runtime.\n\n(3) Some test cases have been hidden and are not displayed to \nprevent hardcoding of the solutions.\n(4) If you have difficulties with the task, read the following\npages from Cormen (Introduction to algorithms third edition) pp.\n384-389 (from the subitem \"overlapping subproblems\") and/or\nhttps://en.wikipedia.org/wiki/Overlapping_subproblems.",
+    "skeleton": "def calc(N,A):\n    pass"
+  },
+  {
+    "question_id": "21_22-3-1-python",
+    "student_id": "TKGNRH4K",
+    "source_file": "21_22_solutions.csv",
+    "solution_code": "def opt(W):\n    best_incl = 0\n    best_excl = 0\n\n    for e in W:  # O(n)\n        new_b_excl = max(best_excl, best_incl)\n\n        best_incl = best_excl + e\n        best_excl = new_b_excl\n\n    return max(best_excl, best_incl)\n\n\nassert opt([10, 2, 3, 4, 5]) == 18\nassert opt([4, 9, 4]) == 9\nassert opt([4, 7, 4]) == 8\nassert opt([3, 2, 1]) == 4\nassert opt([1, 2, 1, 4, 5]) == 7\nassert opt([21, 2]) == 21\nassert opt([5]) == 5\nassert opt([30, 0, 0, 40]) == 70\n\n\n\n\ndef find_longest_path(s, v, graph, length):\n    if (len(graph[v]) == 0):\n        return length\n\n    mx_len = 0\n\n    for u in graph[v]:\n        p = find_longest_path(s, u, graph, length+1)\n        mx_len = max(mx_len, p)\n\n    return mx_len",
+    "title_eng": "Billboard (Python)",
+    "task_description_plain_eng": "(This task is a slightly modified old exam task from the\nWS 2020/21)\n\nA company obtains permission to place billboards on one side of a road.\nAlong the $n \\in \\mathbb{N}$ kilometers long road, there are $n+1$ suitable\nlocations at intervals of exactly one kilometer. For the location at kilometer\n$i \\in\\{0,1, \\ldots, n\\}$ advertisers are willing to pay an amount $w_i$\nwith $0 < w_{i} < 10^9$ to the company. However, the road traffic regulation states\nthat there must be at least two kilometers between every two billboards.\nSo if the company places a billboard at kilometer $i$, then at kilometer $i-1$ and $i+1$\nno billboard may be placed.\n\nHelp the company determine a selection of locations that will\nmaximizes the total profit from renting the sites.\n\nInput: an array $W$ of size $n+1$ for a\n$n \\in \\mathbb{N} \\land 1 \\leq n \\leq 1000$.\n\nOutput: The maximum profit that can be obtained from the billboards.\n\nThe output must be calculated in $O(n)$.\n",
+    "skeleton": "def opt(W):\n    pass"
+  },
+  {
+    "question_id": "19_20-4-2-python",
+    "student_id": "Y3YJOVOH",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "# Node in parameter represents root of tree\ndef TREE_MINIMUM(root):\n    x = root\n    while(x.left != None):\n        x = x.left\n    return (x)\n\n\ndef delete(root, delete):\n    y = Node\n    x = Node\n    if (delete.left == None or \\\n    delete.right == None):\n        y = delete\n    else:\n        y = TREE_MINIMUM (delete.right)\n    if (y.left != None):\n        x = y.left\n    else:\n        x = y.right\n    if (x != None):\n        x.parent = y.parent\n    if (y.parent == None):\n        root = x\n    else:\n        if (y == y.parent.left):\n            y.parent.left = x\n        else:\n            y.parent.right = x\n    if (y != delete):\n        delete.key = y.key\n    y = None\n    return (root)",
+    "title_eng": "Search trees: Removal (Python)",
+    "task_description_plain_eng": "These tasks will again be about search trees. Reminder:\nOur search trees are built from \"nodes\", analogous to the lecture.\nA node looks like this:\n\nclass Node:\n * key\n * left\n * right\n * Parent\n\nFor this task, implement a method \"delete\" which deletes a\n\"Node\" in the search tree and returns the new search tree. Use the\nthe method from the lecture slides, i.e. the one with \"TREE-MINIMUM\".\nThe nodes can be reused as desired. The function gets the root\nof the search tree and the node to be deleted.\n",
+    "skeleton": "# Node in parameter represents root of tree\ndef delete(root, delete):\n    return None"
+  },
+  {
+    "question_id": "20_21-3-2-python",
+    "student_id": "MKLGNTNE",
+    "source_file": "20_21_solutions.csv",
+    "solution_code": "def dfs(node, adj, dp, vis):\n    vis[node] = True\n\n    for i in range(0, len(adj[node])):\n        if not vis[adj[node][i]]:\n            dfs(adj[node][i], adj, dp, vis)\n\n        dp[node] = max(dp[node], 1 + dp[adj[node][i]])\n\n\ndef calc(N, A):\n    adj = [[] for i in range(N + 1)]\n    for a in A:\n        adj[a[0]].append(a[1])\n\n    dp = [0] * (N + 1)\n    vis = [False] * (N + 1)\n\n    for i in range(1, N + 1):\n        if not vis[i]:\n            dfs(i, adj, dp, vis)\n\n    ans = 0\n    for i in range(1, N + 1):\n        ans = max(ans, dp[i])\n\n    return ans",
+    "title_eng": "Longest path DAG (Python)",
+    "task_description_plain_eng": "Input: A natural number $1 \\leq N \\leq 2500$, which indicates how many\nvertices the graph $G$ has, and a two-dimensional array $A$ of size\nsize $1 \\leq M \\leq 10^6$ of integers\n$A = [[a^{1}_1,a^{2}_1],[a^{1}_2,a^{2}_2],...,[a^{1}_M,a^{2}_M]]$ which is\nencodes the set of edges of $G$.  If $[a,b] \\in A$, then there is a\ndirected edge from the vertex $a$ to the vertex $b$. You may assume\nthat there are no directed cycles in $G$. For example: Let $N = 3$\nand $A = [[1,2],[2,3]]$ then the following graph is obtained:\n\n[]\n\nOutput: The length of the longest directed path in $G$.\nYour algorithm has to compute the solution in $O(N+M)$.\n\nTime limit: 1 CPU second\n\nHint:\n\n(1) The libraries java.util.Arrays, java.util.ArrayList, java.lang.Math\nare already imported automatically.\n\n(2) If you have difficulties with this task: Ignore\nthe runtime restrictions and first implement a naive \nrecursive solution. Then use dynamic programming\n(memoization) to achieve the desired runtime.\n\n(3) Some test cases have been hidden and are not displayed to\nprevent hardcoding of the solutions.",
+    "skeleton": "def calc(N,A):\n    pass"
+  },
+  {
+    "question_id": "19_20-4-1-python",
+    "student_id": "SEATKBAK",
+    "source_file": "19_20_solutions.csv",
+    "solution_code": "# Node in parameter represents root of tree\ndef insert(root, target):\n    before = None\n    is_left_child = None\n    current = root\n    while current is not None:\n        before = current\n        if target.key >= current.key:\n            is_left_child = False\n            current = current.right\n        else:\n            is_left_child = True\n            current = current.left\n        \n    if before != None:\n        target.parent = before\n        if is_left_child:\n            before.left = target\n        else:\n            before.right = target\n        return root\n    else:\n        return target",
+    "title_eng": "Search trees: Insertion (Python)",
+    "task_description_plain_eng": "These tasks will be about search trees. Our search trees are built from\n\"nodes\", analogous to the lecture. A node looks like this:\n\nclass Node:\n * key\n * left\n * right\n * parent\n\nIn the lecture you have already seen an algorithm for searching in a search tree.\n\nYou are to implement different methods for the search trees.\nFor this task, implement a method \"insert\" that inserts a\n\"Node\" into the search tree and returns the new search tree.\nThe nodes can be reused as desired. The function\nis passed the root of the search tree and the new node.",
+    "skeleton": "# Node in parameter represents root of tree\ndef insert(root, insert):\n    return None"
+  }
+]

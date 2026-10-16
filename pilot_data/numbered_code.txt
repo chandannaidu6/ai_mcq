@@ -1,0 +1,586 @@
+============================== 0 21_22-3-1-python DT7AUBV2 ==============================
+  1: def opt(W):
+  2:     if len(W) < 2:
+  3:         return W[0]
+  4:     
+  5:     a = W[0]
+  6:     b = max(W[0],W[1])
+  7:     for i in range(2,len(W)):
+  8:         c = max(W[i]+a, b)
+  9:         a = b
+ 10:         b = c
+ 11:             
+ 12:     return b
+
+============================== 1 19_20-4-2-python OTLDMOQQ ==============================
+  1: # Node in parameter represents root of tree
+  2: def delete(root, delete):
+  3:     if delete.left == None or delete.right == None:
+  4:         y = delete
+  5:     else:
+  6:         y = t_min(delete.right)
+  7:     if y.left != None:
+  8:         x = y.left
+  9:     else: x = y.right
+ 10:     if x!= None:
+ 11:         x.parent = y.parent
+ 12:     if y.parent == None:
+ 13:         root = x
+ 14:     else:
+ 15:         if y == y.parent.left:
+ 16:             y.parent.left = x
+ 17:         else:
+ 18:             y.parent.right = x
+ 19:     if y != delete:
+ 20:         delete.key = y.key
+ 21:     return root
+ 22:     
+ 23: def t_min(node):
+ 24:     while node.left !=None:
+ 25:         node = node.left
+ 26:     return node
+
+============================== 2 20_21-3-2-python 2DXKHJJW ==============================
+  1: def calc(N,A):
+  2:     Lengths = []
+  3:     Connections = []
+  4: 
+  5:     for i in range(N):
+  6:         Lengths += [0]
+  7:         Connections += [[]]
+  8: 
+  9:     for e in A:
+ 10:         assert e[0] < e[1]
+ 11:         Connections[e[0]-1] += [e[1]-1]
+ 12: 
+ 13:     for e in range(len(Connections)):
+ 14:         for u in Connections[e]:
+ 15:             Lengths[u] = max(Lengths[e] + 1, Lengths[u])
+ 16: 
+ 17:     return max(Lengths)
+
+============================== 3 19_20-4-1-python ZLV7YBN2 ==============================
+  1: def treewalk(root):
+  2:     if root is not None:
+  3:         treewalk(root.left)
+  4:         treewalk(root.right)
+  5:         return root
+  6: 
+  7: # Node in parameter represents root of tree
+  8: def insert(root, insert):
+  9:     x = root
+ 10:     y = None
+ 11:     while x is not None:
+ 12:         y = x
+ 13:         if insert.key < y.key:
+ 14:             x = x.left
+ 15:         else:
+ 16:             x = x.right
+ 17:     insert.parent = y
+ 18:     if y is None:
+ 19:         root = insert
+ 20:     elif insert.key < y.key:
+ 21:         y.left = insert
+ 22:     else:
+ 23:         y.right = insert
+ 24: 
+ 25:     return treewalk(root)
+
+============================== 4 19_20-6-2-python 5XRZQT3Q ==============================
+  1: def knapSack(value, volume, capacity):
+  2:     assert len(value) == len(volume)
+  3: 
+  4:     for x in volume:
+  5:         assert x == round(x)
+  6:     table = [[0 for x in range(capacity + 1)] for x in range(len(value) + 1)] 
+  7:   
+  8:     # Build table table[][] in bottom up manner 
+  9:     for i in range(len(value) + 1): 
+ 10:         for w in range(capacity + 1): 
+ 11:             if i == 0 or w == 0: 
+ 12:                 table[i][w] = 0
+ 13:             elif volume[i-1] <= w: 
+ 14:                 table[i][w] = max(value[i-1] + table[i-1][w-volume[i-1]],  table[i-1][w]) 
+ 15:             else: 
+ 16:                 table[i][w] = table[i-1][w] 
+ 17:   
+ 18:     return table[len(value)][capacity]
+
+============================== 5 20_21-3-1-python AZCUDUY3 ==============================
+  1: def knapSack(value, volume, capacity):
+  2:     assert len(value) == len(volume)
+  3: 
+  4:     for x in volume: assert x == round(x)
+  5: 
+  6:     tabelle = [[0.0 for x in range(capacity + 1)] for x in range(len(value) + 1)]
+  7:     for i in range(len(value)+1): 
+  8:         for w in range(capacity+1):
+  9:             if i == 0 or w == 0:
+ 10:                 tabelle[i][w] = 0
+ 11:             elif volume[i-1] <= w:
+ 12:                 if value[i-1] + tabelle[i-1][w-volume[i-1]] >= tabelle[i-1][w]:
+ 13:                     tabelle[i][w] = value[i-1] + tabelle[i-1][w-volume[i-1]]
+ 14:                 else:
+ 15:                     tabelle[i][w] = tabelle[i-1][w]
+ 16:             else: 
+ 17:                 tabelle[i][w] = tabelle[i-1][w]
+ 18:     return (tabelle[len(value)][capacity])
+
+============================== 6 21_22-1-1-python JZTB6RAW ==============================
+  1: def calc(n):
+  2: 
+  3:     n_int = int(n) % 1000000007
+  4: 
+  5:     split = 512
+  6: 
+  7:     if n_int == 0:
+  8:         return 0
+  9: 
+ 10:     mod = n_int % split
+ 11: 
+ 12:     n_gerade = (n_int-mod)//split
+ 13:     return (pow(pow(2,n_gerade) % 1000000007, split) * pow(2, mod) - 1) % 1000000007
+
+============================== 7 21_22-2-2-python QGYBAFER ==============================
+  1: def calc(a,b):
+  2:     s = [0] * len(b)
+  3:     c = [0] * len(a)
+  4:     c[0] = a[0]
+  5:     for i in range(1,len(a)):
+  6:         c[i] = a[i] + c[i-1]
+  7:     for i in range(len(b)):
+  8:         l = ((b[i])[0])
+  9:         r = ((b[i])[1])
+ 10:         if l == r:
+ 11:             s[i] = a[l]
+ 12:         elif l == 0:
+ 13:             s[i] = c[r]
+ 14:         else:
+ 15:             s[i] = c[r] - c[l-1]
+ 16:     return s
+
+============================== 8 19_20-5-1-python SW3OAVTI ==============================
+  1: import queue
+  2: 
+  3: def bfs(graph, start):
+  4:     a = queue.Queue()
+  5:     a.put(start)
+  6:     result = []
+  7:     while not a.empty():
+  8:         current = a.get()
+  9:         for x in graph[current]:
+ 10:             a.put(x)
+ 11:         graph[current] = []
+ 12:         if current not in result:
+ 13:             result.append(current)
+ 14:     return result
+
+============================== 9 20_21-2-1-python JOUYKYF7 ==============================
+  1: def calc(A, B):
+  2:     s = ""
+  3:     count = {}
+  4:     for i in A:
+  5:         if i in count:
+  6:             count[i] += 1
+  7:         else:
+  8:             count[i] = 1
+  9:     for i in range(len(B)):
+ 10:         try:
+ 11:             if count[i] <= B[i]:
+ 12:                 s += "1"
+ 13:             else:
+ 14:                 s += "0"
+ 15:         except KeyError:
+ 16:             s += "1"
+ 17:     return s
+
+============================== 10 21_22-2-1-python YGC572GZ ==============================
+  1: def calc(A,B):
+  2:     for i in A:
+  3:         B[i] = B[i]-1
+  4:     s = ""
+  5:     for i in B:
+  6:         if i <0 :
+  7:             s = s+"0"
+  8:         else: 
+  9:             s = s+"1"
+ 10:     return s
+
+============================== 11 20_21-1-1-python WURVTKED ==============================
+  1: def expo(a,b,c):
+  2:     return pow(a,b,c)
+  3: 
+  4: 
+  5: '''
+  6: def addiere(a,b,c,d,e):
+  7: 
+  8:     res = (a+b) % 1000000007
+  9: 
+ 10:     res = (res+c) % 1000000007
+ 11: 
+ 12:     res = (res+d) % 1000000007
+ 13: 
+ 14:     res = (res+e) % 1000000007
+ 15: 
+ 16:     return (res+1000) % 1000000007
+ 17: '''
+
+============================== 12 19_20-2-1-python 7H5QQ662 ==============================
+  1: class Queue:
+  2:     """Klasse, die eine selbstgebaute Queue darstellt.
+  3:     """
+  4:     def __init__(self):
+  5:         self.elements: list = list()
+  6: 
+  7:     def isEmpty(self):
+  8:         """Prueft, ob die Queue leer ist.
+  9:         :return: True, wenn die Queue leer ist;
+ 10:             False, sonst
+ 11:         """
+ 12:         if len(self.elements) == 0:
+ 13:             return True
+ 14:         return False
+ 15: 
+ 16:     def head(self):
+ 17:         """Gibt den Wert des ersten Elements in der Queue
+ 18:             zurueck.
+ 19:         :return: Den Wert des ersten Elementes in der Queue
+ 20:         """
+ 21:         if len(self.elements) > 0:
+ 22:             return self.elements[0]
+ 23:         else:
+ 24:             raise IndexError
+ 25: 
+ 26:     def enqueue(self, x):
+ 27:         """Haengt ein Element an die Queue an.
+ 28:         :param x: Anzuhaengendes Element
+ 29:         """
+ 30:         if len(self.elements) < 100:
+ 31:             self.elements.append(x)
+ 32:         else:
+ 33:             raise IndexError
+ 34: 
+ 35:     def dequeue(self):
+ 36:         """Entfernt das erste Element aus der Queue
+ 37:         :return: Erstes Element
+ 38:         """
+ 39:         if len(self.elements) > 0:
+ 40:             return self.elements.pop(0)
+ 41:         else:
+ 42:             raise IndexError
+
+============================== 13 20_21-1-2-python XBL4HF3H ==============================
+  1: SENTINEL = float("inf")     # Wächter
+  2: 
+  3: def merge(A, l, q, r):
+  4:     n1 = q - l + 1          # die Länge des linken Teils
+  5:     n2 = r - q              # -"-           rechten
+  6:     L = [None] * (n1+1)     # leere Teil-Listen erstellen, +1 für den Wächter
+  7:     R = [None] * (n2+1)     # 
+  8:     for i in range(n1):
+  9:         L[i] = A[l+i]       # Teil-Listen befüllen
+ 10:     for i in range(n2):
+ 11:         R[i] = A[q + 1 + i] 
+ 12:     L[n1] = SENTINEL        # Wächter hinzufügen
+ 13:     R[n2] = SENTINEL
+ 14:     i,j = 0,0               # Zähler für Teil-Listen
+ 15:     for k in range(l, r+1): # r+1, damit mit den Wächtern verglichen wird
+ 16:         if(L[i] <= R[j]):   # der eigentliche Merge-Teil
+ 17:             A[k] = L[i]
+ 18:             i += 1
+ 19:         else:
+ 20:             A[k] = R[j]
+ 21:             j += 1
+ 22: 
+ 23: def mergeSort(A, l, r):
+ 24:     if(l < r):
+ 25:         m = (l + r) // 2    # Mitte bestimmen 
+ 26:         mergeSort(A, l, m)  # Rekursion für die linke Seite
+ 27:         mergeSort(A, m+1, r)# Rekursion für die rechte Seite
+ 28:         merge(A, l, m, r)   # Zusammenfügen der beiden Seiten
+ 29:     
+ 30: def solution(A):
+ 31:     l = 0                   # Index für das erste
+ 32:     r = len(A) - 1          # und das letzte Element
+ 33:     mergeSort(A, l, r)      # mergeSort starten
+ 34:     return A
+
+============================== 14 19_20-2-2-python NZJES6ZV ==============================
+  1: def Calculator(inputarray, stack):
+  2:     for c in inputarray:
+  3:         num = None
+  4:         operand = None
+  5:         try:
+  6:             num = int(c)
+  7:             stack.push(num)
+  8:             
+  9:         except ValueError:
+ 10:             operand = c
+ 11:             num2 = stack.pop()
+ 12:             num1 = stack.pop()
+ 13:             result = None
+ 14:             if operand == '+':
+ 15:                 result = num1 + num2
+ 16:             elif operand == '-':
+ 17:                 result = num1 - num2
+ 18:             elif operand == '*':
+ 19:                 result = num1 * num2
+ 20:             elif operand == '/':
+ 21:                 result = num1 // num2
+ 22:             
+ 23:             stack.push(result)
+ 24:     return stack.pop()
+
+============================== 15 21_22-1-2-python I2RHNDKA ==============================
+  1: def calc(f):
+  2:     n=0
+  3:     r=10**18
+  4:     while r-n>=2:
+  5:         c=(n+r)//2
+  6:         if not f(c):
+  7:             n=c
+  8:         else:
+  9:             r=c
+ 10:     return r
+
+============================== 16 19_20-5-2-python Y3YJOVOH ==============================
+  1: def dfs(graph, start):
+  2:     visited = list()
+  3:     besucht = list()
+  4:     for i in range(len(graph)):
+  5:         visited.append(False)
+  6:     def dfs_visit(start):
+  7:         visited[start] = True
+  8:         besucht.append(start)
+  9:         for v in graph[start]:
+ 10:             if visited[v] == False:
+ 11:                 dfs_visit(v)
+ 12:     dfs_visit(start)
+ 13:     return (besucht)
+
+============================== 17 19_20-6-1-python ZLV7YBN2 ==============================
+  1: def edelta_evaluate(edelta,i,j,u,v):
+  2:   if i == 0:
+  3:     return j
+  4:   if j == 0:
+  5:     return i
+  6:   if u[i-1] == v[j-1]:
+  7:     repcost = 0
+  8:   else:
+  9:     repcost = 1
+ 10:   return min([edelta[i-1][j-1] + repcost,
+ 11:               edelta[i-1][j] + 1,
+ 12:               edelta[i][j-1] + 1])
+ 13: 
+ 14: def editDistance(u, v):
+ 15:   m = len(u)
+ 16:   n = len(v)
+ 17:   edelta = [[None] * (n+1) for i in range(m+1)]
+ 18:   for i in range(m+1):
+ 19:     for j in range(n+1):
+ 20:       edelta[i][j] = edelta_evaluate(edelta,i,j,u,v)
+ 21:   return edelta[m][n]
+
+============================== 18 19_20-1-1-python 7H5QQ662 ==============================
+  1: def LCM(a: int, b: int) -> int:
+  2:     return (a * b) / GCD(a, b)
+  3: 
+  4: def GCD(a: int, b: int) -> int:
+  5:     if (a % b) == 0:
+  6:         return b
+  7:     return GCD(b, a % b)
+
+============================== 19 19_20-3-1-python 6RPRP4IE ==============================
+  1: def listSorter(listToSort: ListToSort) -> ListToSort:
+  2:     for i in range (0,listToSort.Length()-1):
+  3:         noswap = True
+  4:         for j in range (listToSort.Length()-1,i,-1):
+  5:             if listToSort.Smaller(j,j-1):
+  6:                 listToSort.Swap(j,j-1)
+  7:                 noswap = False
+  8:         if noswap:
+  9:             break
+ 10:     return listToSort
+
+============================== 20 21_22-3-2-python 5UQSXBL3 ==============================
+  1: class KnotenImKopf:
+  2:     def __init__(self, wert: int):
+  3:         self.wert = wert
+  4:         self.farbe = "w"
+  5:         # self.vater = None
+  6:         # self.d = None
+  7:         # self.f = None
+  8:         self.adj = []
+  9: 
+ 10:     def append_to_adj(self, wert: int) -> None:
+ 11:         self.adj.append(wert)
+ 12: 
+ 13: 
+ 14: def dfs(knoten: list) -> list:
+ 15:     # global zeit
+ 16:     # zeit = 0
+ 17:     endzeit_list = []
+ 18: 
+ 19:     for u in knoten[1:]:  # s. Init. von knoten
+ 20:         if u.farbe == "w":
+ 21:             dfs_visit(knoten, u, endzeit_list)
+ 22:     return endzeit_list
+ 23: 
+ 24: 
+ 25: def dfs_visit(knoten: list, u: KnotenImKopf, endzeit_list: list) -> None:
+ 26:     # global zeit
+ 27:     # zeit += 1
+ 28:     # u.d = zeit
+ 29:     u.farbe = "g"
+ 30:     for v_value in u.adj:
+ 31:         v = knoten[v_value]
+ 32:         if v.farbe == "w":
+ 33:             # v.vater = u.wert
+ 34:             dfs_visit(knoten, v, endzeit_list)
+ 35:     # u.farbe = "s"
+ 36:     # zeit += 1
+ 37:     # u.f = zeit
+ 38:     endzeit_list.append(u.wert)
+ 39: 
+ 40: 
+ 41: def calc(n: int, a: list) -> int:
+ 42:     knoten = [KnotenImKopf(i) for i in range(n + 1)]  # 0-ter Knoten ist PLatzhalter
+ 43:     for e in a:
+ 44:         knoten[e[0]].append_to_adj(e[1])
+ 45:     e_list = dfs(knoten)
+ 46:     longest_path = [0] * (n + 1)
+ 47: 
+ 48:     for value in e_list:
+ 49:         u = knoten[value]
+ 50:         for v in u.adj:
+ 51:             longest_path[value] = max(longest_path[value], longest_path[v] + 1)
+ 52: 
+ 53:     return max(longest_path)
+
+============================== 21 21_22-3-1-python TKGNRH4K ==============================
+  1: def opt(W):
+  2:     best_incl = 0
+  3:     best_excl = 0
+  4: 
+  5:     for e in W:  # O(n)
+  6:         new_b_excl = max(best_excl, best_incl)
+  7: 
+  8:         best_incl = best_excl + e
+  9:         best_excl = new_b_excl
+ 10: 
+ 11:     return max(best_excl, best_incl)
+ 12: 
+ 13: 
+ 14: assert opt([10, 2, 3, 4, 5]) == 18
+ 15: assert opt([4, 9, 4]) == 9
+ 16: assert opt([4, 7, 4]) == 8
+ 17: assert opt([3, 2, 1]) == 4
+ 18: assert opt([1, 2, 1, 4, 5]) == 7
+ 19: assert opt([21, 2]) == 21
+ 20: assert opt([5]) == 5
+ 21: assert opt([30, 0, 0, 40]) == 70
+ 22: 
+ 23: 
+ 24: 
+ 25: 
+ 26: def find_longest_path(s, v, graph, length):
+ 27:     if (len(graph[v]) == 0):
+ 28:         return length
+ 29: 
+ 30:     mx_len = 0
+ 31: 
+ 32:     for u in graph[v]:
+ 33:         p = find_longest_path(s, u, graph, length+1)
+ 34:         mx_len = max(mx_len, p)
+ 35: 
+ 36:     return mx_len
+
+============================== 22 19_20-4-2-python Y3YJOVOH ==============================
+  1: # Node in parameter represents root of tree
+  2: def TREE_MINIMUM(root):
+  3:     x = root
+  4:     while(x.left != None):
+  5:         x = x.left
+  6:     return (x)
+  7: 
+  8: 
+  9: def delete(root, delete):
+ 10:     y = Node
+ 11:     x = Node
+ 12:     if (delete.left == None or \
+ 13:     delete.right == None):
+ 14:         y = delete
+ 15:     else:
+ 16:         y = TREE_MINIMUM (delete.right)
+ 17:     if (y.left != None):
+ 18:         x = y.left
+ 19:     else:
+ 20:         x = y.right
+ 21:     if (x != None):
+ 22:         x.parent = y.parent
+ 23:     if (y.parent == None):
+ 24:         root = x
+ 25:     else:
+ 26:         if (y == y.parent.left):
+ 27:             y.parent.left = x
+ 28:         else:
+ 29:             y.parent.right = x
+ 30:     if (y != delete):
+ 31:         delete.key = y.key
+ 32:     y = None
+ 33:     return (root)
+
+============================== 23 20_21-3-2-python MKLGNTNE ==============================
+  1: def dfs(node, adj, dp, vis):
+  2:     vis[node] = True
+  3: 
+  4:     for i in range(0, len(adj[node])):
+  5:         if not vis[adj[node][i]]:
+  6:             dfs(adj[node][i], adj, dp, vis)
+  7: 
+  8:         dp[node] = max(dp[node], 1 + dp[adj[node][i]])
+  9: 
+ 10: 
+ 11: def calc(N, A):
+ 12:     adj = [[] for i in range(N + 1)]
+ 13:     for a in A:
+ 14:         adj[a[0]].append(a[1])
+ 15: 
+ 16:     dp = [0] * (N + 1)
+ 17:     vis = [False] * (N + 1)
+ 18: 
+ 19:     for i in range(1, N + 1):
+ 20:         if not vis[i]:
+ 21:             dfs(i, adj, dp, vis)
+ 22: 
+ 23:     ans = 0
+ 24:     for i in range(1, N + 1):
+ 25:         ans = max(ans, dp[i])
+ 26: 
+ 27:     return ans
+
+============================== 24 19_20-4-1-python SEATKBAK ==============================
+  1: # Node in parameter represents root of tree
+  2: def insert(root, target):
+  3:     before = None
+  4:     is_left_child = None
+  5:     current = root
+  6:     while current is not None:
+  7:         before = current
+  8:         if target.key >= current.key:
+  9:             is_left_child = False
+ 10:             current = current.right
+ 11:         else:
+ 12:             is_left_child = True
+ 13:             current = current.left
+ 14:         
+ 15:     if before != None:
+ 16:         target.parent = before
+ 17:         if is_left_child:
+ 18:             before.left = target
+ 19:         else:
+ 20:             before.right = target
+ 21:         return root
+ 22:     else:
+ 23:         return target
+
