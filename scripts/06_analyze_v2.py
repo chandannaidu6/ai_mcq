@@ -41,13 +41,8 @@ MODEL_SOURCES = [
     ("Qwen2.5-Coder-7B-Instruct-AWQ", "model_answers_v2_qwen2.5-coder-7b-instruct-awq.json", "Qwen2.5-Coder", False, 7, None),
     ("Qwen2.5-Coder-14B-Instruct-AWQ", "model_answers_v2_qwen2.5-coder-14b-instruct-awq.json", "Qwen2.5-Coder", False, 14, None),
     ("DeepSeek-Coder-V2-Lite-Instruct-AWQ", "model_answers_v2_deepseek-coder-v2-lite-instruct-awq.json", "DeepSeek-Coder", False, 16, None),
-    ("DeepSeek-Coder-6.7B-Instruct", "model_answers_v2_deepseek-coder-6.7b-instruct.json", "DeepSeek-Coder", False, 6.7, None),
     ("GPT-6 Luna (reasoning: none)", "model_answers_v2_openai_gpt-6-luna_reasoning-none.json", "GPT-6", True, None, "off"),
     ("GPT-6 Luna (reasoning: medium)", "model_answers_v2_openai_gpt-6-luna_reasoning-medium.json", "GPT-6", True, None, "on"),
-    ("Gemini 3.8 Flash (thinking: off*)", "model_answers_v2_gemini-3.8-flash_thinking-off.json", "Gemini", True, None, "off"),
-    ("Gemini 3.8 Flash (thinking: on)", "model_answers_v2_gemini-3.8-flash_thinking-on.json", "Gemini", True, None, "on"),
-    ("Gemini 3.5 Flash-Lite (thinking: off)", "model_answers_v2_gemini-3.5-flash-lite_thinking-off.json", "Gemini", True, None, "off"),
-    ("Gemini 3.5 Flash-Lite (thinking: on)", "model_answers_v2_gemini-3.5-flash-lite_thinking-on.json", "Gemini", True, None, "on"),
     ("Claude Haiku 5.5 (thinking: off)", "model_answers_v2_claude-haiku-5.5_thinking-off.json", "Claude", True, None, "off"),
     ("Claude Haiku 5.5 (thinking: on)", "model_answers_v2_claude-haiku-5.5_thinking-on.json", "Claude", True, None, "on"),
 ]

@@ -2,13 +2,17 @@
   "reasoning-none": {
     "batch_id": "batch_6ad2b44eebb48190b39013fc73b7e7fd",
     "input_file_id": "file-SEX2pE1UbYBTTQ437QJopU",
-    "status": "validating",
-    "submitted_at": 1792193615.38753
+    "status": "completed",
+    "submitted_at": 1792193615.38753,
+    "downloaded": true,
+    "out_path": "/s/chopin/b/grad/C837792936/ai-mcq-pilot/results/model_answers_v2_openai_gpt-6-luna_reasoning-none.json"
   },
   "reasoning-medium": {
     "batch_id": "batch_6ad2b4502e088190ae4bbc7d06d615aa",
     "input_file_id": "file-92vbGVJSZhFcnjmGzisFEE",
-    "status": "validating",
-    "submitted_at": 1792193616.3279102
+    "status": "completed",
+    "submitted_at": 1792193616.3279102,
+    "downloaded": true,
+    "out_path": "/s/chopin/b/grad/C837792936/ai-mcq-pilot/results/model_answers_v2_openai_gpt-6-luna_reasoning-medium.json"
   }
 }

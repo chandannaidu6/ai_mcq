@@ -26,12 +26,19 @@
     "openai": 9,
     "gemini": 0
   },
-  "known_blockers": [
+  "resolved_blockers": [
     {
       "provider": "anthropic",
-      "status": "BLOCKED",
-      "detail": "CLAUDE_API_KEY in .env is a user-scoped key (prefix sk-ant-usr-...). All API calls (models.list AND messages.create) fail with: 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use.' Needs either a workspace-scoped key (prefix sk-ant-api03-...) or the workspace ID to pass as the anthropic-workspace-id header. Confirmed via direct API calls on 2026-10-16; not yet resolved.",
-      "pricing_still_recorded": true
+      "status": "RESOLVED 2026-10-16",
+      "detail": "User replaced CLAUDE_API_KEY in .env with a workspace-scoped key. Confirmed working via models.list and messages.create. claude-haiku-5-5 confirmed as the real, current model id.",
+      "thinking_api_note": "claude-haiku-5-5 does not support the older `thinking: {type: enabled, budget_tokens: N}` form (400 error directing to `thinking.type.adaptive` + `output_config.effort`). Measured on 20 real MCQ questions: with NO thinking param at all, the model still engaged adaptive thinking on its own (thinking_tokens were NOT 0) -- true 'off' required the explicit `thinking: {type: disabled}` value (confirmed thinking_tokens=0 across the real 20-question sample). 'On' uses `thinking: {type: adaptive}, output_config: {effort: high}`."
+    }
+  ],
+  "scope_changes": [
+    {
+      "change": "Gemini free-tier answerers (gemini-3.8-flash, gemini-3.5-flash-lite, thinking on/off) dropped per explicit user instruction after ~15 minutes of runtime.",
+      "reason": "Free tier enforces a ~5 requests/minute per-model quota (confirmed via live 429 responses during the cost-projection test and the full run), making the full 1005-question x 2-model x 2-setting sweep take an estimated ~7 hours. User said not to use Gemini given that runtime. All Gemini code (scripts/05b_run_gemini.py) and partial progress were kept for the record but partial result files were deleted so the final report does not include incomplete Gemini data.",
+      "when": "2026-10-16, after ~4-20 questions had been answered per Gemini setting"
     }
   ]
 }

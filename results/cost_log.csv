@@ -1,0 +1,9 @@
+provider,model_setting,n_calls,input_tokens,output_tokens,thinking_or_reasoning_tokens,cost_usd_this_setting,running_total_usd_this_provider
+openai,gpt-6-luna (reasoning: none),1005,382176,4020,0,0.0201,0.0201
+openai,gpt-6-luna (reasoning: medium),1004,381747,412984,401438,0.1223,0.1424
+anthropic,claude-haiku-5.5 (thinking: off),NOT RUN,,,,,
+anthropic,claude-haiku-5.5 (thinking: on),NOT RUN,,,,,
+
+TOTALS,,,,,,openai=0.1424,anthropic=0.0000
+,,,,,,"gemini=0.0000 (free tier, dropped before any token usage was billable)",
+BUDGET CAPS,,,,,,openai_cap=9.00,anthropic_cap=9.00

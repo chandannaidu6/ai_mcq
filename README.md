@@ -95,3 +95,62 @@ python scripts/05_analyze.py
   the `verification_code` snippets (line numbers must match exactly for the
   tracer to work).
 - `results/` -- all deliverables (see `summary.md` for the final report).
+
+## v2: expanded 8-category, multi-provider pilot
+
+A second, larger run reuses everything above and extends it. See
+`results/summary_v2.md` for the final report. Research question: can AI
+models answer AI-generated comprehension questions across 8 categories
+(adding `call_count`, `edge_case`, `code_modification`, `data_structure_state`
+to the original 4), and which categories/providers are hardest?
+
+```
+python scripts/01_sample_solutions.py data_extracted/AD2022dataset pilot_data/sampled_solutions_v2.json 185
+python scripts/02_generate_questions_v2.py
+python scripts/03_verify_answer_keys_v2.py
+python scripts/04_run_all_models_v2.py          # GPU, ~4 models, one subprocess each
+python scripts/05c_openai_batch.py submit       # then: poll
+python scripts/05d_anthropic_batch.py submit    # then: poll
+python scripts/05e_build_cost_log.py
+python scripts/06_analyze_v2.py
+```
+
+Key differences from v1:
+- **185 solutions** (seed=42, strict superset of the original 25), all 21 tasks.
+- **Template-based (AutoMCQ-style) generator** (`scripts/gen_lib.py`,
+  `scripts/02_generate_questions_v2.py`) instead of hand-authoring every
+  question -- uses `ast` analysis of each solution plus the dataset's own
+  `tests.csv` test cases and `tester` harness preambles as grounding, in one
+  pass, with no execution-based self-checking (same rule as v1). Produced
+  **1005 questions**; **701 (70%)** have execution-verified ground truth;
+  **101 (14%)** of the generator's own answer keys were wrong when checked
+  (left uncorrected, reported as a finding, broken down by category).
+- A tester's preamble can bundle a full **reference solution** (used
+  internally for comparison-based grading) alongside genuinely-needed
+  support classes. `gl.filter_harness_to_needed` strips anything not
+  referenced by name in the student's code or the dataset's own tests,
+  so what's shown to answering models (`harness_code_display`) never
+  leaks a reference solution, while the full harness (`harness_code`) is
+  still used for execution/verification.
+- Network access is disabled inside the Step 3 verification subprocess
+  (`harness.NETWORK_BLOCK_CODE`).
+- **Answerers**: Qwen2.5-Coder 3B/7B-AWQ/14B-AWQ (confirmed via the HF API
+  that 32B-class quantizations need ~19GB+ weights alone and don't fit this
+  20GB GPU, so 14B-AWQ is genuinely the largest that fits),
+  DeepSeek-Coder-V2-Lite-Instruct-AWQ, GPT-6 Luna (OpenAI Batch API,
+  reasoning none/medium), Claude Haiku 5.5 (Anthropic Message Batches,
+  thinking disabled/adaptive-high). Real model IDs and prices were looked
+  up from each provider's own API/docs, never assumed (`scripts/00_list_models.py`,
+  `results/prices.json`).
+- **Gemini was dropped** (gemini-3.8-flash / gemini-3.5-flash-lite) after
+  confirming via live calls that the free tier enforces a ~5
+  requests/minute per-model quota, which would have taken ~7 hours for
+  full coverage; the user asked not to use it once that became clear. The
+  runner (`scripts/05b_run_gemini.py`) is resumable and kept in the repo
+  in case it's revisited.
+- Every paid call's real token usage (never estimated) is logged to
+  `results/cost_log.csv`; both OpenAI and Anthropic stayed at a few cents
+  total, far under the $9/provider cap.
+- **Caveat**: Claude Haiku 5.5 is in the same model family as the question
+  generator (Claude Sonnet 5), which may give it an advantage the other
+  models don't have -- noted in `summary_v2.md`.
