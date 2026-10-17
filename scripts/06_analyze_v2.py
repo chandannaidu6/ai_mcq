@@ -297,8 +297,9 @@ def main():
     lines.append("# AI-MCQ-PILOT v2: expanded 8-category, multi-provider results\n")
     lines.append(f"Generator: **{metadata.get('generator',{}).get('model_name','Claude Sonnet 5')}** "
                  f"(`{metadata.get('generator',{}).get('model_id','claude-sonnet-5')}`), run via Claude Code.\n")
-    lines.append(f"Run date: {metadata.get('run_started','2026-10-16')} "
-                 f"(report generated during an ongoing run -- see per-provider completeness notes below).\n")
+    all_complete = not missing and all(info["complete"] for info in loaded.values())
+    status_note = "all providers complete." if all_complete else "report generated during an ongoing run -- see per-provider completeness notes below."
+    lines.append(f"Run date: {metadata.get('run_started','2026-10-16')} ({status_note})\n")
     lines.append("")
 
     lines.append("## Hardware\n")
@@ -392,6 +393,12 @@ def main():
     if best_oss[0] and best_comm[0]:
         lines.append(f"\nBest open-source model: **{best_oss[0]}** ({best_oss[1]:.1f}%). "
                       f"Best commercial/API model so far: **{best_comm[0]}** ({best_comm[1]:.1f}%).\n")
+    if any(l.startswith("Claude Haiku") for l in loaded):
+        lines.append("\n**Caveat:** Claude Haiku is in the same model family as the question generator "
+                      "(Claude Sonnet 5). It may have an advantage the other answering models don't have "
+                      "(e.g. shared conventions in how Anthropic models phrase/parse this kind of question), "
+                      "so its ranking above should be read with that in mind, not as a clean apples-to-apples "
+                      "result.\n")
     lines.append("")
 
     lines.append("## Invalid-answer rates\n")

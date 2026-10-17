@@ -1,12 +1,16 @@
 {
   "thinking-off": {
-    "batch_id": "msgbatch_017N4dv4sRqyVYmpUZN1ThQD",
-    "status": "in_progress",
-    "submitted_at": 1792194238.203136
+    "batch_id": "msgbatch_01RtSLznz7DaVLJH4Gg8NUt5",
+    "status": "ended",
+    "submitted_at": 1792194685.618144,
+    "downloaded": true,
+    "out_path": "/s/chopin/b/grad/C837792936/ai-mcq-pilot/results/model_answers_v2_claude-haiku-5.5_thinking-off.json"
   },
   "thinking-on": {
-    "batch_id": "msgbatch_012CfHpdsqoK4DpTjTYPeu2v",
-    "status": "in_progress",
-    "submitted_at": 1792194238.773348
+    "batch_id": "msgbatch_0121chC1rpsBbwsdzCLLjKWF",
+    "status": "ended",
+    "submitted_at": 1792194686.175,
+    "downloaded": true,
+    "out_path": "/s/chopin/b/grad/C837792936/ai-mcq-pilot/results/model_answers_v2_claude-haiku-5.5_thinking-on.json"
   }
 }

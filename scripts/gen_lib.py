@@ -464,12 +464,21 @@ def pick_simple_tests(task_tests, n=3):
     has no newline), single print(...), and whose testcode we can rewrite
     into a zero-arg callable -- i.e. tests actually usable by this
     generator's category builders. Order follows task_tests' own order
-    (is_example=True already sorted first by load_tests)."""
+    (is_example=True already sorted first by load_tests).
+
+    Excludes "style-check" tests that reference `__student_answer__` (the
+    raw submission text, used by the real grading harness to check things
+    like "no `eval` used") -- these don't call the student's function at
+    all, so a loop_trace/control_flow/call_count/variable_state question
+    built from one is meaningless (the traced lines are never reached,
+    regardless of the actual algorithm)."""
     out = []
     for row in task_tests:
         if "\n" in row["expected"].strip():
             continue
         if row["testcode"].count("print(") != 1:
+            continue
+        if "__student_answer__" in row["testcode"]:
             continue
         if not build_call_fn_source(row["testcode"], "__probe"):
             continue
@@ -495,6 +504,8 @@ def find_natural_edge_test(task_tests):
             continue  # multi-value test, not a simple single-answer case
         if code.count("print(") != 1:
             continue
+        if "__student_answer__" in code:
+            continue  # style-check test, doesn't call the student's function (see pick_simple_tests)
         if any(m in code for m in EDGE_MARKERS) and build_call_fn_source(code, "__probe"):
             return row
     return None

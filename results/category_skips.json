@@ -248,6 +248,12 @@
   {
     "question_id": "21_22-1-2-python",
     "student_id": "I2RHNDKA",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "I2RHNDKA",
     "category": "data_structure_state",
     "reason": "no test with a list/dict-valued expected result found"
   },
@@ -542,6 +548,12 @@
   {
     "question_id": "21_22-1-2-python",
     "student_id": "CT774TDG",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "CT774TDG",
     "category": "data_structure_state",
     "reason": "no test with a list/dict-valued expected result found"
   },
@@ -832,6 +844,12 @@
     "student_id": "5XRZQT3Q",
     "category": "variable_state",
     "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "OUOMG2M6",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
   },
   {
     "question_id": "21_22-1-2-python",
@@ -1156,6 +1174,12 @@
     "student_id": "PFNSZINL",
     "category": "data_structure_state",
     "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "6FO3BSKN",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
   },
   {
     "question_id": "21_22-1-2-python",
@@ -1502,6 +1526,12 @@
   {
     "question_id": "21_22-1-2-python",
     "student_id": "JZTB6RAW",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JZTB6RAW",
     "category": "code_modification",
     "reason": "no comparison operator or non-trivial constant found to modify"
   },
@@ -1838,6 +1868,12 @@
   {
     "question_id": "21_22-1-2-python",
     "student_id": "QGYBAFER",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "QGYBAFER",
     "category": "data_structure_state",
     "reason": "no test with a list/dict-valued expected result found"
   },
@@ -2116,6 +2152,12 @@
     "student_id": "LDR4Y4L3",
     "category": "variable_state",
     "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "4IIMNJUZ",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
   },
   {
     "question_id": "21_22-1-2-python",
@@ -2428,6 +2470,12 @@
     "student_id": "C6P7CKBX",
     "category": "data_structure_state",
     "reason": "no test with a list/dict-valued expected result found"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "JKHYPP7X",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
   },
   {
     "question_id": "21_22-1-2-python",
@@ -2776,6 +2824,12 @@
     "student_id": "C36JD6CE",
     "category": "variable_state",
     "reason": "no simple assignment found before a return"
+  },
+  {
+    "question_id": "21_22-1-2-python",
+    "student_id": "R3NZURQV",
+    "category": "edge_case",
+    "reason": "edge mutation not applicable (no list/int/str literal arg found)"
   },
   {
     "question_id": "21_22-1-2-python",

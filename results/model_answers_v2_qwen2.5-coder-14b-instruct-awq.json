@@ -2,22 +2,22 @@
   "model_id": "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ",
   "quantization": "awq",
   "dtype": "float16",
-  "load_time_seconds": 43.26600694656372,
-  "generation_time_seconds": 63.72970128059387,
-  "total_wall_time_seconds": 106.99570822715759,
-  "n_questions": 1005,
-  "n_with_ground_truth": 701,
-  "n_valid_answers": 1005,
-  "n_correct": 491,
-  "accuracy_overall_pct": 70.04279600570614,
+  "load_time_seconds": 39.90702939033508,
+  "generation_time_seconds": 64.00306439399719,
+  "total_wall_time_seconds": 103.91009378433228,
+  "n_questions": 996,
+  "n_with_ground_truth": 759,
+  "n_valid_answers": 996,
+  "n_correct": 538,
+  "accuracy_overall_pct": 70.88274044795784,
   "accuracy_by_category_pct": {
-    "output": 74.6376811594203,
-    "edge_case": 72.0,
-    "code_modification": 86.44067796610169,
-    "loop_trace": 31.48148148148148,
-    "control_flow": 51.515151515151516,
-    "call_count": 92.45283018867924,
-    "variable_state": 60.0,
+    "output": 65.0,
+    "edge_case": 79.67479674796748,
+    "code_modification": 75.55555555555556,
+    "loop_trace": 38.75,
+    "control_flow": 63.63636363636363,
+    "call_count": 90.0,
+    "variable_state": 64.51612903225806,
     "data_structure_state": 92.5925925925926
   },
   "results": [
@@ -103,11 +103,11 @@
       "category": "control_flow",
       "question_id": "19_20-4-2-python",
       "answer_key": "B",
-      "ground_truth_option": "A",
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s001_q1",
@@ -345,11 +345,11 @@
       "category": "control_flow",
       "question_id": "20_21-3-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s005_q5",
@@ -378,11 +378,11 @@
       "category": "output",
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s006_q1",
@@ -400,11 +400,11 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s006_q3",
@@ -412,21 +412,21 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s006_q4",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s006_q5",
@@ -434,8 +434,8 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
       "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -445,10 +445,10 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
       "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s007_q1",
@@ -466,11 +466,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s007_q3",
@@ -488,9 +488,9 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -499,33 +499,33 @@
       "category": "control_flow",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s007_q6",
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s007_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s008_q0",
@@ -610,19 +610,19 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
       "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s009_q1",
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -631,9 +631,9 @@
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -642,33 +642,33 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s009_q4",
       "category": "control_flow",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s009_q5",
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s009_q6",
@@ -697,9 +697,9 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -708,9 +708,9 @@
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -719,29 +719,29 @@
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s010_q4",
       "category": "control_flow",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "C",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s010_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
@@ -752,11 +752,11 @@
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s011_q0",
@@ -873,9 +873,9 @@
       "category": "control_flow",
       "question_id": "19_20-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -896,39 +896,39 @@
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s015_q1",
-      "category": "edge_case",
+      "category": "code_modification",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": null,
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
       "id": "s015_q2",
-      "category": "code_modification",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s015_q3",
       "category": "loop_trace",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
       "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
+      "id": "s015_q3",
+      "category": "control_flow",
+      "question_id": "21_22-1-2-python",
+      "answer_key": "B",
+      "ground_truth_option": "B",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
@@ -936,36 +936,25 @@
     },
     {
       "id": "s015_q4",
-      "category": "control_flow",
+      "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "A",
       "ground_truth_option": "A",
-      "model_raw_output": "B",
-      "model_answer": "B",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s015_q5",
-      "category": "call_count",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "D",
-      "ground_truth_option": null,
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
     {
-      "id": "s015_q6",
+      "id": "s015_q5",
       "category": "variable_state",
       "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s016_q0",
@@ -1027,9 +1016,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -1192,9 +1181,9 @@
       "category": "control_flow",
       "question_id": "19_20-3-1-python",
       "answer_key": "A",
-      "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -1401,9 +1390,9 @@
       "category": "control_flow",
       "question_id": "20_21-3-2-python",
       "answer_key": "A",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -1445,11 +1434,11 @@
       "category": "control_flow",
       "question_id": "19_20-4-1-python",
       "answer_key": "B",
-      "ground_truth_option": "D",
+      "ground_truth_option": "B",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s024_q2",
@@ -1511,11 +1500,11 @@
       "category": "control_flow",
       "question_id": "19_20-6-2-python",
       "answer_key": "B",
-      "ground_truth_option": "D",
+      "ground_truth_option": "B",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s025_q5",
@@ -1643,28 +1632,6 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s027_q3",
-      "category": "control_flow",
-      "question_id": "21_22-1-1-python",
-      "answer_key": "C",
-      "ground_truth_option": "A",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s027_q4",
-      "category": "call_count",
-      "question_id": "21_22-1-1-python",
-      "answer_key": "A",
       "ground_truth_option": null,
       "model_raw_output": "A",
       "model_answer": "A",
@@ -1672,13 +1639,35 @@
       "is_correct": false
     },
     {
+      "id": "s027_q3",
+      "category": "control_flow",
+      "question_id": "21_22-1-1-python",
+      "answer_key": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s027_q4",
+      "category": "call_count",
+      "question_id": "21_22-1-1-python",
+      "answer_key": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
       "id": "s027_q5",
       "category": "variable_state",
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
       "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -1709,11 +1698,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
+      "ground_truth_option": null,
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s028_q3",
@@ -1731,20 +1720,20 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s028_q5",
       "category": "control_flow",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -1753,20 +1742,20 @@
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s028_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -1830,9 +1819,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -1874,7 +1863,7 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -1885,9 +1874,9 @@
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -1896,18 +1885,18 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s030_q4",
       "category": "control_flow",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
+      "ground_truth_option": "D",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -1918,28 +1907,6 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s030_q6",
-      "category": "variable_state",
-      "question_id": "20_21-2-1-python",
-      "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s031_q0",
-      "category": "output",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "D",
       "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
@@ -1947,8 +1914,63 @@
       "is_correct": true
     },
     {
+      "id": "s030_q6",
+      "category": "variable_state",
+      "question_id": "20_21-2-1-python",
+      "answer_key": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s031_q0",
+      "category": "output",
+      "question_id": "21_22-2-1-python",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
       "id": "s031_q1",
       "category": "edge_case",
+      "question_id": "21_22-2-1-python",
+      "answer_key": "A",
+      "ground_truth_option": null,
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
+      "id": "s031_q2",
+      "category": "code_modification",
+      "question_id": "21_22-2-1-python",
+      "answer_key": "B",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s031_q3",
+      "category": "loop_trace",
+      "question_id": "21_22-2-1-python",
+      "answer_key": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s031_q4",
+      "category": "control_flow",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
       "ground_truth_option": "A",
@@ -1958,57 +1980,24 @@
       "is_correct": false
     },
     {
-      "id": "s031_q2",
-      "category": "code_modification",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s031_q3",
-      "category": "loop_trace",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s031_q4",
-      "category": "control_flow",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "A",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
       "id": "s031_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s031_q6",
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -2212,28 +2201,17 @@
     },
     {
       "id": "s036_q1",
-      "category": "edge_case",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s036_q2",
       "category": "code_modification",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
-      "id": "s036_q3",
+      "id": "s036_q2",
       "category": "loop_trace",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
@@ -2244,37 +2222,37 @@
       "is_correct": false
     },
     {
-      "id": "s036_q4",
+      "id": "s036_q3",
       "category": "control_flow",
+      "question_id": "21_22-1-2-python",
+      "answer_key": "C",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s036_q4",
+      "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s036_q5",
-      "category": "call_count",
+      "category": "variable_state",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s036_q6",
-      "category": "variable_state",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "C",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
-      "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s037_q0",
@@ -2336,9 +2314,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -2413,7 +2391,7 @@
       "category": "control_flow",
       "question_id": "19_20-6-1-python",
       "answer_key": "C",
-      "ground_truth_option": "A",
+      "ground_truth_option": "C",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
@@ -2480,8 +2458,8 @@
       "question_id": "19_20-1-1-python",
       "answer_key": "A",
       "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -2490,11 +2468,11 @@
       "category": "control_flow",
       "question_id": "19_20-1-1-python",
       "answer_key": "A",
-      "ground_truth_option": "C",
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s039_q5",
@@ -2677,9 +2655,9 @@
       "category": "control_flow",
       "question_id": "19_20-4-2-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "C",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -2853,7 +2831,7 @@
       "category": "control_flow",
       "question_id": "19_20-6-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": "C",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
@@ -2997,21 +2975,21 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s048_q4",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s049_q0",
@@ -3040,11 +3018,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": null,
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s049_q3",
@@ -3062,44 +3040,44 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s049_q5",
       "category": "control_flow",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s049_q6",
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s049_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s050_q0",
@@ -3150,9 +3128,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "B",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -3194,9 +3172,9 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": null,
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -3205,9 +3183,9 @@
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -3216,20 +3194,20 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s051_q4",
       "category": "control_flow",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -3238,18 +3216,18 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s051_q6",
       "category": "variable_state",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
@@ -3271,9 +3249,9 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -3282,22 +3260,22 @@
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s052_q3",
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s052_q4",
@@ -3305,17 +3283,17 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "A",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s052_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
@@ -3326,11 +3304,11 @@
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s053_q0",
@@ -3370,9 +3348,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -3491,11 +3469,11 @@
       "category": "control_flow",
       "question_id": "19_20-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": "D",
+      "ground_truth_option": "A",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s056_q5",
@@ -3514,35 +3492,24 @@
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
       "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s057_q1",
-      "category": "edge_case",
+      "category": "code_modification",
       "question_id": "21_22-1-2-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
       "id": "s057_q2",
-      "category": "code_modification",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s057_q3",
       "category": "loop_trace",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
@@ -3553,26 +3520,26 @@
       "is_correct": false
     },
     {
-      "id": "s057_q4",
+      "id": "s057_q3",
       "category": "control_flow",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
-      "id": "s057_q5",
+      "id": "s057_q4",
       "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s058_q0",
@@ -4173,9 +4140,9 @@
       "category": "control_flow",
       "question_id": "20_21-3-1-python",
       "answer_key": "B",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -4207,10 +4174,10 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s069_q1",
@@ -4228,22 +4195,22 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s069_q3",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s070_q0",
@@ -4272,11 +4239,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s070_q3",
@@ -4294,9 +4261,9 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "C",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -4306,32 +4273,32 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
       "ground_truth_option": "C",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s070_q6",
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s070_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s071_q0",
@@ -4393,9 +4360,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -4437,20 +4404,20 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s072_q2",
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -4459,11 +4426,11 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s072_q4",
@@ -4471,8 +4438,8 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "A",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -4481,22 +4448,22 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s072_q6",
       "category": "variable_state",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s073_q0",
@@ -4514,9 +4481,9 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": null,
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -4525,11 +4492,11 @@
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s073_q3",
@@ -4537,8 +4504,8 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -4547,11 +4514,11 @@
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s073_q5",
@@ -4602,9 +4569,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -4668,9 +4635,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-2-python",
       "answer_key": "C",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -4775,7 +4742,7 @@
     },
     {
       "id": "s078_q1",
-      "category": "edge_case",
+      "category": "code_modification",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
       "ground_truth_option": "B",
@@ -4786,7 +4753,7 @@
     },
     {
       "id": "s078_q2",
-      "category": "code_modification",
+      "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
       "ground_truth_option": "C",
@@ -4797,23 +4764,12 @@
     },
     {
       "id": "s078_q3",
-      "category": "call_count",
+      "category": "variable_state",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
       "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s078_q4",
-      "category": "variable_state",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -4921,9 +4877,9 @@
       "category": "control_flow",
       "question_id": "19_20-6-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -5350,9 +5306,9 @@
       "category": "control_flow",
       "question_id": "19_20-6-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -5427,11 +5383,11 @@
       "category": "control_flow",
       "question_id": "20_21-3-1-python",
       "answer_key": "D",
-      "ground_truth_option": "C",
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s089_q5",
@@ -5461,10 +5417,10 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s090_q1",
@@ -5482,22 +5438,22 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s090_q3",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s091_q0",
@@ -5548,7 +5504,7 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -5560,8 +5516,8 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
       "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -5570,22 +5526,22 @@
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s091_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s092_q0",
@@ -5691,20 +5647,20 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s093_q2",
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -5713,7 +5669,7 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -5724,22 +5680,22 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s093_q5",
       "category": "variable_state",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s094_q0",
@@ -5757,33 +5713,33 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
+      "ground_truth_option": null,
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s094_q2",
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": "B",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s094_q3",
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s094_q4",
@@ -5791,17 +5747,17 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
       "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s094_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -5812,11 +5768,11 @@
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s095_q0",
@@ -5856,9 +5812,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -5966,11 +5922,11 @@
       "category": "control_flow",
       "question_id": "19_20-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
+      "ground_truth_option": "A",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s098_q5",
@@ -5996,7 +5952,7 @@
     },
     {
       "id": "s099_q1",
-      "category": "edge_case",
+      "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
       "ground_truth_option": "B",
@@ -6004,17 +5960,6 @@
       "model_answer": "B",
       "is_valid": true,
       "is_correct": true
-    },
-    {
-      "id": "s099_q2",
-      "category": "call_count",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
-      "is_valid": true,
-      "is_correct": false
     },
     {
       "id": "s100_q0",
@@ -6065,9 +6010,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -6230,9 +6175,9 @@
       "category": "control_flow",
       "question_id": "19_20-3-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -6296,9 +6241,9 @@
       "category": "control_flow",
       "question_id": "21_22-3-2-python",
       "answer_key": "C",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -6373,9 +6318,9 @@
       "category": "control_flow",
       "question_id": "21_22-3-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -6494,11 +6439,11 @@
       "category": "control_flow",
       "question_id": "19_20-4-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s108_q2",
@@ -6626,22 +6571,22 @@
       "category": "control_flow",
       "question_id": "21_22-1-1-python",
       "answer_key": "A",
-      "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s110_q4",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s111_q0",
@@ -6670,11 +6615,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s111_q3",
@@ -6692,7 +6637,7 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -6704,32 +6649,32 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s111_q6",
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s111_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s112_q0",
@@ -6791,9 +6736,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -6835,9 +6780,9 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -6846,9 +6791,9 @@
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -6857,16 +6802,49 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s113_q4",
       "category": "call_count",
       "question_id": "20_21-2-1-python",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s113_q5",
+      "category": "variable_state",
+      "question_id": "20_21-2-1-python",
+      "answer_key": "B",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s114_q0",
+      "category": "output",
+      "question_id": "21_22-2-1-python",
+      "answer_key": "A",
+      "ground_truth_option": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
+      "id": "s114_q1",
+      "category": "edge_case",
+      "question_id": "21_22-2-1-python",
       "answer_key": "D",
       "ground_truth_option": null,
       "model_raw_output": "D",
@@ -6875,55 +6853,22 @@
       "is_correct": false
     },
     {
-      "id": "s113_q5",
-      "category": "variable_state",
-      "question_id": "20_21-2-1-python",
-      "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s114_q0",
-      "category": "output",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s114_q1",
-      "category": "edge_case",
-      "question_id": "21_22-2-1-python",
-      "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
       "id": "s114_q2",
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s114_q3",
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -6934,18 +6879,18 @@
       "category": "control_flow",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s114_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
@@ -6956,11 +6901,11 @@
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s115_q0",
@@ -7140,17 +7085,6 @@
     },
     {
       "id": "s119_q1",
-      "category": "edge_case",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s119_q2",
       "category": "code_modification",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
@@ -7161,10 +7095,10 @@
       "is_correct": true
     },
     {
-      "id": "s119_q3",
+      "id": "s119_q2",
       "category": "loop_trace",
       "question_id": "21_22-1-2-python",
-      "answer_key": "D",
+      "answer_key": "C",
       "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
@@ -7172,35 +7106,35 @@
       "is_correct": false
     },
     {
-      "id": "s119_q4",
+      "id": "s119_q3",
       "category": "control_flow",
       "question_id": "21_22-1-2-python",
-      "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
-      "id": "s119_q5",
+      "id": "s119_q4",
       "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
-      "id": "s119_q6",
+      "id": "s119_q5",
       "category": "variable_state",
       "question_id": "21_22-1-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "B",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -7341,9 +7275,9 @@
       "category": "control_flow",
       "question_id": "19_20-6-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -7594,9 +7528,9 @@
       "category": "control_flow",
       "question_id": "21_22-3-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -7627,11 +7561,11 @@
       "category": "control_flow",
       "question_id": "19_20-4-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": "B",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s126_q1",
@@ -7792,9 +7726,9 @@
       "category": "control_flow",
       "question_id": "20_21-3-1-python",
       "answer_key": "A",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -7825,9 +7759,9 @@
       "category": "output",
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "D",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -7847,7 +7781,7 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
@@ -7858,11 +7792,11 @@
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s131_q0",
@@ -7870,10 +7804,10 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
       "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s131_q1",
@@ -7891,11 +7825,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": null,
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s131_q3",
@@ -7913,9 +7847,9 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -7925,10 +7859,10 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s131_q6",
@@ -7946,11 +7880,11 @@
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s132_q0",
@@ -8046,30 +7980,30 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
       "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s133_q1",
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": null,
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s133_q2",
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -8078,9 +8012,9 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -8090,8 +8024,8 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -8100,11 +8034,11 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s133_q6",
@@ -8112,8 +8046,8 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
       "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -8123,19 +8057,19 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s134_q1",
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -8144,9 +8078,9 @@
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -8155,20 +8089,20 @@
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s134_q4",
       "category": "control_flow",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "C",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -8177,18 +8111,18 @@
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s134_q6",
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -8287,9 +8221,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-2-python",
       "answer_key": "A",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -8383,69 +8317,58 @@
     },
     {
       "id": "s139_q1",
-      "category": "edge_case",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "D",
-      "model_answer": "D",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s139_q2",
       "category": "code_modification",
       "question_id": "21_22-1-2-python",
-      "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "answer_key": "B",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
     {
-      "id": "s139_q3",
+      "id": "s139_q2",
       "category": "loop_trace",
       "question_id": "21_22-1-2-python",
       "answer_key": "C",
       "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
-      "id": "s139_q4",
+      "id": "s139_q3",
       "category": "control_flow",
       "question_id": "21_22-1-2-python",
-      "answer_key": "D",
+      "answer_key": "C",
       "ground_truth_option": "A",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "A",
+      "model_answer": "A",
+      "is_valid": true,
+      "is_correct": true
+    },
+    {
+      "id": "s139_q4",
+      "category": "call_count",
+      "question_id": "21_22-1-2-python",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
       "id": "s139_q5",
-      "category": "call_count",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s139_q6",
       "category": "variable_state",
       "question_id": "21_22-1-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s140_q0",
@@ -8551,9 +8474,9 @@
       "category": "control_flow",
       "question_id": "19_20-6-1-python",
       "answer_key": "D",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -8705,9 +8628,9 @@
       "category": "control_flow",
       "question_id": "21_22-3-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -9014,10 +8937,10 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "D",
       "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s150_q1",
@@ -9035,22 +8958,22 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": null,
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s150_q3",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s151_q0",
@@ -9079,11 +9002,11 @@
       "category": "code_modification",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": null,
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s151_q3",
@@ -9101,9 +9024,9 @@
       "category": "loop_trace",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -9113,32 +9036,32 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
       "ground_truth_option": "C",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s151_q6",
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s151_q7",
       "category": "variable_state",
       "question_id": "21_22-2-2-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s152_q0",
@@ -9189,9 +9112,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "D",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -9233,20 +9156,20 @@
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s153_q2",
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -9255,7 +9178,7 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -9267,8 +9190,8 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -9277,20 +9200,20 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s153_q6",
       "category": "variable_state",
       "question_id": "20_21-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -9310,9 +9233,9 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": null,
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": false
     },
@@ -9321,18 +9244,18 @@
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": "C",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s154_q3",
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -9343,33 +9266,33 @@
       "category": "control_flow",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s154_q5",
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": null,
+      "ground_truth_option": "A",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s154_q6",
       "category": "variable_state",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s155_q0",
@@ -9420,9 +9343,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -9475,9 +9398,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-2-python",
       "answer_key": "C",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "C",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": true
     },
@@ -9571,34 +9494,23 @@
     },
     {
       "id": "s159_q1",
-      "category": "edge_case",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s159_q2",
       "category": "code_modification",
       "question_id": "21_22-1-2-python",
-      "answer_key": "D",
-      "ground_truth_option": "D",
+      "answer_key": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
     {
-      "id": "s159_q3",
+      "id": "s159_q2",
       "category": "call_count",
       "question_id": "21_22-1-2-python",
-      "answer_key": "A",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "answer_key": "D",
+      "ground_truth_option": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -9784,8 +9696,8 @@
       "question_id": "19_20-1-1-python",
       "answer_key": "B",
       "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -9794,9 +9706,9 @@
       "category": "control_flow",
       "question_id": "19_20-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -10047,9 +9959,9 @@
       "category": "control_flow",
       "question_id": "20_21-3-2-python",
       "answer_key": "D",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -10157,11 +10069,11 @@
       "category": "control_flow",
       "question_id": "20_21-3-1-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
+      "ground_truth_option": "A",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s169_q5",
@@ -10212,11 +10124,11 @@
       "category": "code_modification",
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s170_q3",
@@ -10224,21 +10136,21 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
       "ground_truth_option": "C",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s170_q4",
       "category": "call_count",
       "question_id": "21_22-1-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s170_q5",
@@ -10246,8 +10158,8 @@
       "question_id": "21_22-1-1-python",
       "answer_key": "C",
       "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -10289,11 +10201,11 @@
       "category": "call_count",
       "question_id": "21_22-2-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "D",
       "model_answer": "D",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s171_q4",
@@ -10301,8 +10213,8 @@
       "question_id": "21_22-2-2-python",
       "answer_key": "C",
       "ground_truth_option": null,
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -10355,9 +10267,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": true
     },
@@ -10378,30 +10290,30 @@
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
       "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s173_q1",
       "category": "edge_case",
       "question_id": "20_21-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
+      "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": true
+      "is_correct": false
     },
     {
       "id": "s173_q2",
       "category": "code_modification",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -10410,7 +10322,7 @@
       "category": "loop_trace",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -10421,20 +10333,20 @@
       "category": "call_count",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s173_q5",
       "category": "variable_state",
       "question_id": "20_21-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "ground_truth_option": "B",
+      "model_raw_output": "C",
+      "model_answer": "C",
       "is_valid": true,
       "is_correct": false
     },
@@ -10454,9 +10366,9 @@
       "category": "edge_case",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": null,
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -10465,9 +10377,9 @@
       "category": "code_modification",
       "question_id": "21_22-2-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -10476,11 +10388,11 @@
       "category": "loop_trace",
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
-      "ground_truth_option": null,
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "B",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s174_q4",
@@ -10488,8 +10400,8 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "B",
       "ground_truth_option": "A",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
       "is_correct": false
     },
@@ -10498,11 +10410,11 @@
       "category": "call_count",
       "question_id": "21_22-2-1-python",
       "answer_key": "C",
-      "ground_truth_option": null,
+      "ground_truth_option": "C",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s174_q6",
@@ -10510,8 +10422,8 @@
       "question_id": "21_22-2-1-python",
       "answer_key": "D",
       "ground_truth_option": null,
-      "model_raw_output": "B",
-      "model_answer": "B",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": false
     },
@@ -10553,9 +10465,9 @@
       "category": "control_flow",
       "question_id": "20_21-1-1-python",
       "answer_key": "C",
-      "ground_truth_option": "C",
-      "model_raw_output": "C",
-      "model_answer": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
@@ -10663,11 +10575,11 @@
       "category": "control_flow",
       "question_id": "19_20-2-2-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
+      "ground_truth_option": "B",
       "model_raw_output": "B",
       "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s178_q5",
@@ -10693,31 +10605,9 @@
     },
     {
       "id": "s179_q1",
-      "category": "edge_case",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "B",
-      "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s179_q2",
       "category": "code_modification",
       "question_id": "21_22-1-2-python",
-      "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
-      "is_valid": true,
-      "is_correct": true
-    },
-    {
-      "id": "s179_q3",
-      "category": "loop_trace",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "C",
+      "answer_key": "B",
       "ground_truth_option": null,
       "model_raw_output": "C",
       "model_answer": "C",
@@ -10725,33 +10615,44 @@
       "is_correct": false
     },
     {
-      "id": "s179_q4",
+      "id": "s179_q2",
+      "category": "loop_trace",
+      "question_id": "21_22-1-2-python",
+      "answer_key": "A",
+      "ground_truth_option": null,
+      "model_raw_output": "C",
+      "model_answer": "C",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
+      "id": "s179_q3",
       "category": "control_flow",
+      "question_id": "21_22-1-2-python",
+      "answer_key": "C",
+      "ground_truth_option": "A",
+      "model_raw_output": "C",
+      "model_answer": "C",
+      "is_valid": true,
+      "is_correct": false
+    },
+    {
+      "id": "s179_q4",
+      "category": "call_count",
       "question_id": "21_22-1-2-python",
       "answer_key": "B",
       "ground_truth_option": "B",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "model_raw_output": "B",
+      "model_answer": "B",
       "is_valid": true,
-      "is_correct": false
+      "is_correct": true
     },
     {
       "id": "s179_q5",
-      "category": "call_count",
-      "question_id": "21_22-1-2-python",
-      "answer_key": "D",
-      "ground_truth_option": null,
-      "model_raw_output": "D",
-      "model_answer": "D",
-      "is_valid": true,
-      "is_correct": false
-    },
-    {
-      "id": "s179_q6",
       "category": "variable_state",
       "question_id": "21_22-1-2-python",
       "answer_key": "D",
-      "ground_truth_option": null,
+      "ground_truth_option": "D",
       "model_raw_output": "A",
       "model_answer": "A",
       "is_valid": true,
@@ -10817,9 +10718,9 @@
       "category": "control_flow",
       "question_id": "19_20-5-2-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -10894,7 +10795,7 @@
       "category": "control_flow",
       "question_id": "19_20-6-1-python",
       "answer_key": "B",
-      "ground_truth_option": "B",
+      "ground_truth_option": "D",
       "model_raw_output": "C",
       "model_answer": "C",
       "is_valid": true,
@@ -10993,9 +10894,9 @@
       "category": "control_flow",
       "question_id": "19_20-3-1-python",
       "answer_key": "A",
-      "ground_truth_option": "A",
-      "model_raw_output": "A",
-      "model_answer": "A",
+      "ground_truth_option": "D",
+      "model_raw_output": "D",
+      "model_answer": "D",
       "is_valid": true,
       "is_correct": true
     },
@@ -11048,9 +10949,9 @@
       "category": "control_flow",
       "question_id": "21_22-3-2-python",
       "answer_key": "D",
-      "ground_truth_option": "D",
-      "model_raw_output": "D",
-      "model_answer": "D",
+      "ground_truth_option": "A",
+      "model_raw_output": "A",
+      "model_answer": "A",
       "is_valid": true,
       "is_correct": true
     },
