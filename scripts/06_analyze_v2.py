@@ -426,6 +426,14 @@ def main():
 
     # hardest/easiest examples
     lines.append("## Example questions most models got wrong\n")
+    lines.append("**Note on `loop_trace`/`call_count`/`control_flow` examples below:** the verifier "
+                  "traces a specific source line's exact hit count or which of two lines fires first. This "
+                  "is accurate to what that line literally did, but can diverge from the more intuitive "
+                  "question text when that line is itself a nested loop header (inflating the count) or "
+                  "when an enclosing loop/condition means neither branch is ever reached (the verifier "
+                  "then defaults to reporting 'else'). See `results/results_summary.md` and "
+                  "`results/metadata.json` (`known_measurement_caveat`) for the full explanation -- this "
+                  "does not affect `output`, `edge_case`, or `data_structure_state` examples.\n")
     gt_by_id = {q["id"]: q for q in questions}
     wrong_counts = {}
     for label, info in loaded.items():

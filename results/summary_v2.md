@@ -126,6 +126,8 @@ COMBINED BUDGET CAP,,,,,,$10.00,margin=$3.2212
 
 ## Example questions most models got wrong
 
+**Note on `loop_trace`/`call_count`/`control_flow` examples below:** the verifier traces a specific source line's exact hit count or which of two lines fires first. This is accurate to what that line literally did, but can diverge from the more intuitive question text when that line is itself a nested loop header (inflating the count) or when an enclosing loop/condition means neither branch is ever reached (the verifier then defaults to reporting 'else'). See `results/results_summary.md` and `results/metadata.json` (`known_measurement_caveat`) for the full explanation -- this does not affect `output`, `edge_case`, or `data_structure_state` examples.
+
 ### `s010_q5` (call_count, task `21_22-2-1-python`) -- wrong for 7/7 models
 
 **Question:** Consider calling the code above like this:

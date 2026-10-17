@@ -48,8 +48,8 @@
       "when": "2026-10-16"
     },
     {
-      "change": "Open-source model results (Qwen2.5-Coder 3B/7B/14B-AWQ, DeepSeek-Coder-V2-Lite-Instruct-AWQ) and their model_answers_v2_*.json files, plus the mixed (open-source + commercial) charts and summary_v2.md, were removed from the repo per explicit user instruction, once the full commercial-model comparison (7 model/settings) was complete.",
-      "reason": "User: 'the opensource models part seems irrelevant' for the poster. The underlying GPU answering pipeline (scripts/04_run_one_model_v2.py, 04_run_all_models_v2.py) is kept, and all deleted result data remains recoverable from git history (commits before this one).",
+      "change": "Removed from results/, once the full commercial-model comparison (7 model/settings) was complete: all open-source model answer files (v1 pilot: Qwen 3B/7B/14B, DeepSeek-Coder-6.7B; v2: Qwen 3B/7B/14B-AWQ, DeepSeek-Coder-V2-Lite-Instruct-AWQ), the v1 pilot's own questions/summary/chart files (superseded by v2 entirely), v1/v2 GPU run logs, and transient batch-polling process state/log files (anthropic_batch_state.json, openai_batch_state.json, new_models_state.json, *_poll.log) that were only needed while jobs were in flight.",
+      "reason": "User: 'the opensource models part seems irrelevant' for the poster, and asked to 'remove all the irrelevant files from the results'. The underlying pipeline scripts (01-07, including the GPU answering scripts) are all kept and re-runnable; all deleted result data remains recoverable from git history (commits before this one).",
       "when": "2026-10-16"
     }
   ],

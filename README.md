@@ -96,6 +96,34 @@ python scripts/05_analyze.py
   tracer to work).
 - `results/` -- all deliverables (see `summary.md` for the final report).
 
+## Poster materials (final scope)
+
+The final deliverable is the **commercial-model-only** comparison. See:
+
+- `results/abstract.md` — poster abstract
+- `results/procedure.md` — methods/procedure section
+- `results/results_summary.md` — full findings write-up, including a
+  "which questions are hardest" deep dive and two honestly-disclosed
+  measurement caveats found during fact-checking
+- `results/summary_v2.md` — the same data as machine-generated tables
+- `results/accuracy_all_models.png`, `accuracy_by_category_all.png`,
+  `thinking_effect.png`, `poster_*.png` (4 additional charts: category
+  difficulty ranking, category x model heatmap, generator reliability,
+  validity-vs-accuracy) — built with the dataviz skill's validated palette
+- `results/cost_log.csv`, `results/prices.json` — real per-call spend
+
+7 commercial model/settings were evaluated (OpenAI GPT-6 Luna x2 settings
+and GPT-6 Astra; Anthropic Claude Haiku 5.5 x2 and Claude Opus 5 x2),
+scored against the same 996-question, execution-verified set built in the
+v2 pipeline below. **Open-source model results (Qwen2.5-Coder, DeepSeek)
+and the original 25-solution/4-category v1 pilot's output files were
+removed from `results/`** per explicit user instruction once the full
+commercial comparison was complete (recoverable from git history; the
+pipeline scripts that produced them are untouched and still re-runnable).
+Run `python scripts/07_poster_plots.py` to regenerate the 4 poster-specific
+charts, or `python scripts/06_analyze_v2.py` for the tables/machine-written
+summary.
+
 ## v2: expanded 8-category, multi-provider pilot
 
 A second, larger run reuses everything above and extends it. See
