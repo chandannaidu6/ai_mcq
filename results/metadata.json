@@ -24,7 +24,9 @@
   "budget_caps_usd": {
     "anthropic": 9,
     "openai": 9,
-    "gemini": 0
+    "gemini": 0,
+    "combined_cap_final_phase_usd": 10,
+    "note": "User later set a combined $10 cap across the two ad-hoc models added in the final phase (gpt-6-astra, claude-opus-5); real spend for that phase was $6.78 (see cost_log.csv)."
   },
   "resolved_blockers": [
     {
@@ -39,6 +41,20 @@
       "change": "Gemini free-tier answerers (gemini-3.8-flash, gemini-3.5-flash-lite, thinking on/off) dropped per explicit user instruction after ~15 minutes of runtime.",
       "reason": "Free tier enforces a ~5 requests/minute per-model quota (confirmed via live 429 responses during the cost-projection test and the full run), making the full 1005-question x 2-model x 2-setting sweep take an estimated ~7 hours. User said not to use Gemini given that runtime. All Gemini code (scripts/05b_run_gemini.py) and partial progress were kept for the record but partial result files were deleted so the final report does not include incomplete Gemini data.",
       "when": "2026-10-16, after ~4-20 questions had been answered per Gemini setting"
+    },
+    {
+      "change": "Added GPT-6 Astra (reasoning: low) and Claude Opus 5 (thinking: off and on) per explicit user instruction; dropped gpt-5.5-pro (requested as 'top GPT model') before any full run.",
+      "reason": "gpt-5.5-pro only supports reasoning_effort in {medium, high, xhigh} (no low/off mode) and is priced at $30/$180 per million tokens. A real 20-question cost-projection test measured ~401 input / ~401 output tokens/question at the minimum available setting (medium), projecting ~$84 for the full 996-question set -- about 9x the user's budget, with no cheaper mode to fall back to. gpt-6-astra (the top-of-family GPT-6 model by price, $10/$50/M) was substituted, confirmed via a real cost-projection test to fit comfortably (~$2.48 actual via batch API).",
+      "when": "2026-10-16"
+    },
+    {
+      "change": "Open-source model results (Qwen2.5-Coder 3B/7B/14B-AWQ, DeepSeek-Coder-V2-Lite-Instruct-AWQ) and their model_answers_v2_*.json files, plus the mixed (open-source + commercial) charts and summary_v2.md, were removed from the repo per explicit user instruction, once the full commercial-model comparison (7 model/settings) was complete.",
+      "reason": "User: 'the opensource models part seems irrelevant' for the poster. The underlying GPU answering pipeline (scripts/04_run_one_model_v2.py, 04_run_all_models_v2.py) is kept, and all deleted result data remains recoverable from git history (commits before this one).",
+      "when": "2026-10-16"
     }
-  ]
+  ],
+  "known_measurement_caveat": {
+    "categories_affected": ["loop_trace", "call_count", "control_flow"],
+    "detail": "The verifier traces a specific source line's hit count (via sys.settrace) to ground loop_trace/call_count questions, and compares which of two candidate lines fires first for control_flow questions. This is accurate to what that exact line actually did, but can diverge from the more intuitive 'how many times did this construct conceptually run' / 'which branch fires' when: (a) the traced line is itself a nested loop header, which Python's FOR_ITER re-fires once per item PLUS a final exhaustion check, inflating the count beyond the outer construct's iteration count; (b) for control_flow, an enclosing loop/condition means NEITHER branch of the traced if-statement is ever reached, but the verifier's binary if/else defaults to reporting the 'else' branch as ground truth rather than 'unreachable'. Identified after the full run during write-up fact-checking; not re-run again given time/budget already spent. Disclosed in results/results_summary.md rather than silently corrected or hidden. Does not affect output, edge_case, data_structure_state, or the headline accuracy/ranking numbers, which are grounded directly in the dataset's own test cases."
+  }
 }

@@ -39,40 +39,38 @@ Run date: 2026-10-16 (all providers complete.)
 
 | Model/setting | Status |
 |---|---|
-| Qwen2.5-Coder-3B-Instruct | complete |
-| Qwen2.5-Coder-7B-Instruct-AWQ | complete |
-| Qwen2.5-Coder-14B-Instruct-AWQ | complete |
-| DeepSeek-Coder-V2-Lite-Instruct-AWQ | complete |
 | GPT-6 Luna (reasoning: none) | complete |
 | GPT-6 Luna (reasoning: medium) | complete |
+| GPT-6 Astra (reasoning: low) | complete |
 | Claude Haiku 5.5 (thinking: off) | complete |
 | Claude Haiku 5.5 (thinking: on) | complete |
+| Claude Opus 5 (thinking: off) | complete |
+| Claude Opus 5 (thinking: on) | complete |
 
 ## Overall accuracy, ranked (scored against execution ground truth)
 
 | Rank | Model/setting | Valid answers | Questions w/ ground truth | Accuracy |
 |---|---|---|---|---|
-| 1 | Claude Haiku 5.5 (thinking: on) | 959/996 | 759 | 94.1% |
-| 2 | GPT-6 Luna (reasoning: medium) | 956/995 | 759 | 93.0% |
-| 3 | GPT-6 Luna (reasoning: none) | 994/996 | 759 | 79.1% |
-| 4 | Qwen2.5-Coder-14B-Instruct-AWQ | 996/996 | 759 | 70.9% |
-| 5 | Qwen2.5-Coder-7B-Instruct-AWQ | 996/996 | 759 | 62.6% |
+| 1 | GPT-6 Astra (reasoning: low) | 932/996 | 759 | 94.9% |
+| 2 | Claude Haiku 5.5 (thinking: on) | 959/996 | 759 | 94.1% |
+| 3 | GPT-6 Luna (reasoning: medium) | 956/995 | 759 | 93.0% |
+| 4 | GPT-6 Luna (reasoning: none) | 994/996 | 759 | 79.1% |
+| 5 | Claude Opus 5 (thinking: on) | 634/996 | 759 | 60.6% |
 | 6 | Claude Haiku 5.5 (thinking: off) | 806/996 | 759 | 58.5% |
-| 7 | Qwen2.5-Coder-3B-Instruct | 996/996 | 759 | 39.9% |
-| 8 | DeepSeek-Coder-V2-Lite-Instruct-AWQ | 995/996 | 759 | 39.8% |
+| 7 | Claude Opus 5 (thinking: off) | 601/996 | 759 | 58.1% |
 
 ## Accuracy by category, every model
 
-| Category | Qwen2.5-Coder-3B-Instruct | Qwen2.5-Coder-7B-Instruct-AWQ | Qwen2.5-Coder-14B-Instruct-AWQ | DeepSeek-Coder-V2-Lite-Instruct-AWQ | GPT-6 Luna (reasoning: none) | GPT-6 Luna (reasoning: medium) | Claude Haiku 5.5 (thinking: off) | Claude Haiku 5.5 (thinking: on) |
-|---|---|---|---|---|---|---|---|---|
-| output | 49% | 61% | 65% | 43% | 71% | 100% | 46% | 99% |
-| variable_state | 44% | 63% | 65% | 45% | 81% | 97% | 34% | 97% |
-| loop_trace | 22% | 32% | 39% | 30% | 56% | 79% | 42% | 88% |
-| control_flow | 39% | 65% | 64% | 35% | 73% | 81% | 56% | 82% |
-| call_count | 29% | 65% | 90% | 24% | 95% | 95% | 93% | 95% |
-| edge_case | 48% | 79% | 80% | 58% | 89% | 99% | 60% | 99% |
-| code_modification | 51% | 56% | 76% | 47% | 76% | 100% | 53% | 100% |
-| data_structure_state | 44% | 67% | 93% | 59% | 81% | 100% | 44% | 100% |
+| Category | GPT-6 Luna (reasoning: none) | GPT-6 Luna (reasoning: medium) | GPT-6 Astra (reasoning: low) | Claude Haiku 5.5 (thinking: off) | Claude Haiku 5.5 (thinking: on) | Claude Opus 5 (thinking: off) | Claude Opus 5 (thinking: on) |
+|---|---|---|---|---|---|---|---|
+| output | 71% | 100% | 100% | 46% | 99% | 60% | 64% |
+| variable_state | 81% | 97% | 100% | 34% | 97% | 42% | 52% |
+| loop_trace | 56% | 79% | 91% | 42% | 88% | 52% | 58% |
+| control_flow | 73% | 81% | 81% | 56% | 82% | 48% | 53% |
+| call_count | 95% | 95% | 95% | 93% | 95% | 75% | 75% |
+| edge_case | 89% | 99% | 100% | 60% | 99% | 63% | 62% |
+| code_modification | 76% | 100% | 100% | 53% | 100% | 29% | 24% |
+| data_structure_state | 81% | 100% | 100% | 44% | 100% | 85% | 85% |
 
 ## Thinking/reasoning ON vs. OFF (same model)
 
@@ -81,14 +79,16 @@ Run date: 2026-10-16 (all providers complete.)
 - **Claude Haiku 5.5**: off=58.5% | on=94.1%
 
 
-## Open-source vs. commercial; accuracy vs. size (Qwen family)
+## Provider / family comparison
 
-Qwen2.5-Coder accuracy by size: Qwen2.5-Coder-3B-Instruct=39.9%, Qwen2.5-Coder-7B-Instruct-AWQ=62.6%, Qwen2.5-Coder-14B-Instruct-AWQ=70.9%
+- **GPT-6**: GPT-6 Luna (reasoning: none)=79.1%, GPT-6 Luna (reasoning: medium)=93.0%, GPT-6 Astra (reasoning: low)=94.9%
 
-Accuracy **increased monotonically** with size.
+- **Claude Haiku**: Claude Haiku 5.5 (thinking: off)=58.5%, Claude Haiku 5.5 (thinking: on)=94.1%
+
+- **Claude Opus**: Claude Opus 5 (thinking: off)=58.1%, Claude Opus 5 (thinking: on)=60.6%
 
 
-Best open-source model: **Qwen2.5-Coder-14B-Instruct-AWQ** (70.9%). Best commercial/API model so far: **Claude Haiku 5.5 (thinking: on)** (94.1%).
+Best overall: **GPT-6 Astra (reasoning: low)** (94.9%). Lowest: **Claude Opus 5 (thinking: off)** (58.1%).
 
 
 **Caveat:** Claude Haiku is in the same model family as the question generator (Claude Sonnet 5). It may have an advantage the other answering models don't have (e.g. shared conventions in how Anthropic models phrase/parse this kind of question), so its ranking above should be read with that in mind, not as a clean apples-to-apples result.
@@ -98,14 +98,13 @@ Best open-source model: **Qwen2.5-Coder-14B-Instruct-AWQ** (70.9%). Best commerc
 
 | Model/setting | Invalid answers |
 |---|---|
-| Qwen2.5-Coder-3B-Instruct | 0/996 (0.0%) |
-| Qwen2.5-Coder-7B-Instruct-AWQ | 0/996 (0.0%) |
-| Qwen2.5-Coder-14B-Instruct-AWQ | 0/996 (0.0%) |
-| DeepSeek-Coder-V2-Lite-Instruct-AWQ | 1/996 (0.1%) |
 | GPT-6 Luna (reasoning: none) | 2/996 (0.2%) |
 | GPT-6 Luna (reasoning: medium) | 39/995 (3.9%) |
+| GPT-6 Astra (reasoning: low) | 64/996 (6.4%) |
 | Claude Haiku 5.5 (thinking: off) | 190/996 (19.1%) |
 | Claude Haiku 5.5 (thinking: on) | 37/996 (3.7%) |
+| Claude Opus 5 (thinking: off) | 395/996 (39.7%) |
+| Claude Opus 5 (thinking: on) | 362/996 (36.3%) |
 
 ## Spend (from results/cost_log.csv and provider dashboards)
 
@@ -113,17 +112,21 @@ Best open-source model: **Qwen2.5-Coder-14B-Instruct-AWQ** (70.9%). Best commerc
 provider,model_setting,n_calls,input_tokens,output_tokens,thinking_or_reasoning_tokens,cost_usd_this_setting,running_total_usd_this_provider
 openai,gpt-6-luna (reasoning: none),996,381332,3984,0,0.0201,0.0201
 openai,gpt-6-luna (reasoning: medium),995,380903,281745,270781,0.0895,0.1095
+openai,gpt-6-astra (reasoning: low),996,381332,22889,16310,2.4789,2.5884
 anthropic,claude-haiku-5.5 (thinking: off),996,513971,103689,0,0.0516,0.0516
 anthropic,claude-haiku-5.5 (thinking: on),996,515963,411288,408001,0.1286,0.1802
+anthropic,claude-opus-5 (thinking: off),996,513971,21225,0,1.5502,1.7305
+anthropic,claude-opus-5 (thinking: on),996,513971,93996,92094,2.4599,4.1904
 
-TOTALS,,,,,,openai=0.1095,anthropic=0.1802
+TOTALS,,,,,,openai=2.5884,anthropic=4.1904
 ,,,,,,"gemini=0.0000 (free tier, dropped before any token usage was billable)",
-BUDGET CAPS,,,,,,openai_cap=9.00,anthropic_cap=9.00
+GRAND TOTAL (all providers),,,,,,$6.7788,
+COMBINED BUDGET CAP,,,,,,$10.00,margin=$3.2212
 ```
 
 ## Example questions most models got wrong
 
-### `s010_q5` (call_count, task `21_22-2-1-python`) -- wrong for 8/8 models
+### `s010_q5` (call_count, task `21_22-2-1-python`) -- wrong for 7/7 models
 
 **Question:** Consider calling the code above like this:
 ```python
@@ -148,7 +151,7 @@ def calc(A,B):
 - C) 5
 - D) 3 <- correct
 
-### `s017_q3` (loop_trace, task `19_20-6-1-python`) -- wrong for 8/8 models
+### `s017_q3` (loop_trace, task `19_20-6-1-python`) -- wrong for 7/7 models
 
 **Question:** Consider calling the code above like this:
 ```python
@@ -184,7 +187,7 @@ def editDistance(u, v):
 - C) 2
 - D) 4
 
-### `s025_q3` (loop_trace, task `19_20-6-2-python`) -- wrong for 8/8 models
+### `s025_q3` (loop_trace, task `19_20-6-2-python`) -- wrong for 7/7 models
 
 **Question:** Consider calling the code above like this:
 ```python
@@ -218,7 +221,34 @@ def knapSack(value, volume, capacity):
 - C) 4 <- correct
 - D) 2
 
-### `s038_q4` (control_flow, task `19_20-6-1-python`) -- wrong for 8/8 models
+### `s028_q4` (loop_trace, task `21_22-2-2-python`) -- wrong for 7/7 models
+
+**Question:** Consider calling the code above like this:
+```python
+print(calc([1,2],[(0,0),(1,1)]))
+```
+How many times does the loop body starting at line 5 execute?
+
+```python
+def calc(a,b):
+    k=1
+    c=b
+    for i in range(len(b)):
+        while k <= b[i][1]:
+            a[k]=a[k]+a[k-1]
+            k=k+1
+        if b[i][0]>0:
+            c[i]=a[b[i][1]]-a[b[i][0]-1]
+        else:
+            c[i]=a[b[i][1]]
+    return c
+```
+- A) 2
+- B) 4
+- C) 3 <- correct
+- D) 1
+
+### `s038_q4` (control_flow, task `19_20-6-1-python`) -- wrong for 7/7 models
 
 **Question:** Consider calling the code above like this:
 ```python
@@ -254,44 +284,8 @@ def editDistance(a, b):
 - C) the `else`/`elif` branch executes (line 18) <- correct
 - D) an exception is raised
 
-### `s059_q3` (loop_trace, task `19_20-6-1-python`) -- wrong for 8/8 models
-
-**Question:** Consider calling the code above like this:
-```python
-print(editDistance("a","a"))
-```
-How many times does the loop body starting at line 8 execute?
-
-```python
-def editDistance(a, b):
-    m = len(a)
-    n = len(b)
-    
-    dp = [[0 for x in range(n + 1)] for x in range(m + 1)] 
-  
-    for i in range(m + 1): 
-        for j in range(n + 1): 
-            if i == 0: 
-                dp[i][j] = j
-            elif j == 0: 
-                dp[i][j] = i
-            elif a[i-1] == b[j-1]: 
-                dp[i][j] = dp[i-1][j-1] 
-            else: 
-                dp[i][j] = 1 + min(dp[i][j-1],        # Insert 
-                                   dp[i-1][j],        # Remove 
-                                   dp[i-1][j-1])    # Replace 
-    return dp[m][n]
-```
-- A) 4
-- B) 6 <- correct
-- C) 2
-- D) 3
-
 ## Draft poster sentences (real numbers only)
 
-> Across 8 model/setting combinations (open-source models on a single NVIDIA RTX 4000 Ada GPU, plus commercial API models), accuracy on 759 execution-verified AI-generated comprehension questions about real student code ranged from 40% (DeepSeek-Coder-V2-Lite-Instruct-AWQ) to 94% (Claude Haiku 5.5 (thinking: on)).
-
-> Within the Qwen2.5-Coder family, accuracy rose from 40% (Qwen2.5-Coder-3B-Instruct) to 71% (Qwen2.5-Coder-14B-Instruct-AWQ) as model size increased.
+> Across 7 commercial model/setting combinations (OpenAI and Anthropic, via each provider's batch API), accuracy on 759 execution-verified AI-generated comprehension questions about real student code ranged from 58% (Claude Opus 5 (thinking: off)) to 95% (GPT-6 Astra (reasoning: low)).
 
 > The question generator (Claude Sonnet 5), operating one-pass with no self-checking, produced 146 incorrect answer keys out of 759 verifiable questions (19.2%) across 8 comprehension categories.

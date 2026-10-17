@@ -1,45 +1,47 @@
 {
   "date_checked": "2026-10-16",
-  "note": "Prices looked up from each provider's own official pricing page before running anything paid, per the pilot's budget rules. Anthropic API access is currently blocked (see metadata.json / summary.md) so its pricing is recorded from the public page but has not yet been exercised against the real API.",
-  "anthropic": {
-    "model": "Claude Haiku 5.5 (exact API model id to be confirmed via /v1/models once workspace access is fixed)",
-    "source_url": "https://claude.com/pricing",
-    "input_usd_per_million_tokens": {
-      "le_100k_context": 0.10,
-      "gt_100k_context": 0.50
+  "note": "Prices looked up from each provider's own official pricing page before running anything paid, per the pilot's budget rules.",
+  "combined_cap_usd": 10,
+  "models": {
+    "claude-haiku-5-5": {
+      "provider": "anthropic",
+      "source_url": "https://claude.com/pricing",
+      "standard_usd_per_million_tokens": {"input": 0.10, "output": 0.50},
+      "batch_discount_pct": 50
     },
-    "output_usd_per_million_tokens": {
-      "le_100k_context": 0.50,
-      "gt_100k_context": 2.50
+    "claude-opus-5": {
+      "provider": "anthropic",
+      "source_url": "https://claude.com/pricing",
+      "tier": "legacy (superseded by Opus 5.5, which is cheaper at $4/$20 -- Opus 5 kept because the user explicitly asked for it by name)",
+      "standard_usd_per_million_tokens": {"input": 5.00, "output": 25.00},
+      "batch_discount_pct": 50
     },
-    "batch_discount_pct": 50,
-    "cap_usd": 9
-  },
-  "openai": {
-    "model": "gpt-6-luna",
-    "source_url": "https://developers.openai.com/api/docs/pricing",
-    "standard_usd_per_million_tokens": {
-      "input": 0.10,
-      "output": 0.50
+    "gpt-6-luna": {
+      "provider": "openai",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "standard_usd_per_million_tokens": {"input": 0.10, "output": 0.50},
+      "batch_discount_pct": 50
     },
-    "cached_input_usd_per_million_tokens": 0.01,
-    "batch_usd_per_million_tokens": {
-      "input": 0.05,
-      "output": 0.25
-    },
-    "batch_discount_pct": 50,
-    "cap_usd": 9
+    "gpt-6-astra": {
+      "provider": "openai",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "tier": "top of the GPT-6 family by price (gpt-5.5-pro is the overall flagship at $30/$180 but has no low-reasoning mode and was dropped: projected ~$84 for the full question set, ~9x the cap)",
+      "standard_usd_per_million_tokens": {"input": 10.00, "output": 50.00},
+      "batch_discount_pct": 50,
+      "reasoning_effort_min": "low"
+    }
   },
   "gemini": {
     "models": ["gemini-3.8-flash", "gemini-3.5-flash-lite"],
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
     "free_tier": true,
-    "free_tier_note": "Both models confirmed on the free tier as of the date checked: input/output tokens free of charge under the free tier (content may be used by Google to improve products). Exact RPM/RPD free-tier caps are not published per-model on the public pricing/rate-limit pages (they depend on the account/project tier); handled at runtime via retry + exponential backoff on 429/RESOURCE_EXHAUSTED responses rather than hardcoded assumed numbers.",
-    "paid_reference_usd_per_million_tokens": {
-      "gemini-3.8-flash": {"input": 0.75, "output_incl_thinking": 3.75, "note": "promotional pricing through 2026-12-31; rises to input 1.50 / output 7.50 from 2027-01-01"},
-      "gemini-3.5-flash-lite": {"input": 0.30, "output": 2.50}
-    },
-    "cap_usd": 0,
-    "cap_note": "Free tier only -- no paid Gemini calls will be made under any circumstances."
-  }
+    "status": "DROPPED per user instruction -- free tier enforces a ~5 requests/minute per-model quota (confirmed via live 429s), making full coverage of 996 questions x 2 models x 2 settings take an estimated ~7 hours. $0 spent.",
+    "cap_usd": 0
+  },
+  "dropped_models": [
+    {
+      "model": "gpt-5.5-pro",
+      "reason": "Only supports reasoning_effort in {medium, high, xhigh} -- no low/off mode. Measured on a real 20-question sample: ~401 input / ~401 output tokens/question at $30/$180 per million -> projected ~$84 for the full 996-question set, about 9x the entire budget. Replaced with gpt-6-astra (reasoning: low), the top-of-family GPT-6 model, projected at ~$4.94 standard / ~$2.47 batch."
+    }
+  ]
 }

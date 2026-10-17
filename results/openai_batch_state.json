@@ -14,5 +14,10 @@
     "submitted_at": 1792194682.7662196,
     "downloaded": true,
     "out_path": "/s/chopin/b/grad/C837792936/ai-mcq-pilot/results/model_answers_v2_openai_gpt-6-luna_reasoning-medium.json"
+  },
+  "gpt-6-astra_reasoning-low": {
+    "batch_id": "batch_6ad2c1e99adc8190b3422bf8f02b74d7",
+    "input_file_id": "file-7daYiku1f7BGd7TfRTyXML",
+    "status": "validating"
   }
 }

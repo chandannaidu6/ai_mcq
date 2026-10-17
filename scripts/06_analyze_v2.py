@@ -37,14 +37,13 @@ PALETTE = ["#4E79A7", "#F28E2B", "#59A14F", "#E15759", "#B07AA1", "#76B7B2", "#E
 
 # (display_label, file_glob_or_path, family, is_commercial, size_b_or_None, thinking_setting_or_None)
 MODEL_SOURCES = [
-    ("Qwen2.5-Coder-3B-Instruct", "model_answers_v2_qwen2.5-coder-3b-instruct.json", "Qwen2.5-Coder", False, 3, None),
-    ("Qwen2.5-Coder-7B-Instruct-AWQ", "model_answers_v2_qwen2.5-coder-7b-instruct-awq.json", "Qwen2.5-Coder", False, 7, None),
-    ("Qwen2.5-Coder-14B-Instruct-AWQ", "model_answers_v2_qwen2.5-coder-14b-instruct-awq.json", "Qwen2.5-Coder", False, 14, None),
-    ("DeepSeek-Coder-V2-Lite-Instruct-AWQ", "model_answers_v2_deepseek-coder-v2-lite-instruct-awq.json", "DeepSeek-Coder", False, 16, None),
     ("GPT-6 Luna (reasoning: none)", "model_answers_v2_openai_gpt-6-luna_reasoning-none.json", "GPT-6", True, None, "off"),
     ("GPT-6 Luna (reasoning: medium)", "model_answers_v2_openai_gpt-6-luna_reasoning-medium.json", "GPT-6", True, None, "on"),
-    ("Claude Haiku 5.5 (thinking: off)", "model_answers_v2_claude-haiku-5.5_thinking-off.json", "Claude", True, None, "off"),
-    ("Claude Haiku 5.5 (thinking: on)", "model_answers_v2_claude-haiku-5.5_thinking-on.json", "Claude", True, None, "on"),
+    ("GPT-6 Astra (reasoning: low)", "model_answers_v2_openai_gpt-6-astra_reasoning-low.json", "GPT-6", True, None, "on"),
+    ("Claude Haiku 5.5 (thinking: off)", "model_answers_v2_claude-haiku-5.5_thinking-off.json", "Claude Haiku", True, None, "off"),
+    ("Claude Haiku 5.5 (thinking: on)", "model_answers_v2_claude-haiku-5.5_thinking-on.json", "Claude Haiku", True, None, "on"),
+    ("Claude Opus 5 (thinking: off)", "model_answers_v2_claude-opus-5_thinking-off.json", "Claude Opus", True, None, "off"),
+    ("Claude Opus 5 (thinking: on)", "model_answers_v2_claude-opus-5_thinking-on.json", "Claude Opus", True, None, "on"),
 ]
 
 
@@ -280,7 +279,8 @@ def main():
     plot_accuracy_all(overall_by_label, loaded, os.path.join(RESULTS_DIR, "accuracy_all_models.png"))
     plot_accuracy_by_category(by_cat_by_label, loaded, os.path.join(RESULTS_DIR, "accuracy_by_category_all.png"))
     plot_thinking_effect(overall_by_label, loaded, os.path.join(RESULTS_DIR, "thinking_effect.png"))
-    plot_accuracy_by_size(overall_by_label, loaded, os.path.join(RESULTS_DIR, "accuracy_by_size.png"))
+    # accuracy_by_size.png dropped: no size (param count) data exists for the
+    # commercial-only model set now in scope (that chart was Qwen-family-specific).
 
     # ---- summary.md ----
     n_total_q = len(questions)
@@ -381,18 +381,16 @@ def main():
         lines.append("(no complete on/off pairs yet)\n")
     lines.append("")
 
-    lines.append("## Open-source vs. commercial; accuracy vs. size (Qwen family)\n")
-    qwen_acc = {l: overall_by_label[l] for l, info in loaded.items() if info["family"] == "Qwen2.5-Coder" and overall_by_label.get(l) is not None}
-    if qwen_acc:
-        trend = sorted(qwen_acc.items(), key=lambda kv: loaded[kv[0]]["size"])
-        monotonic = all(trend[i][1] <= trend[i + 1][1] for i in range(len(trend) - 1))
-        lines.append(f"Qwen2.5-Coder accuracy by size: " + ", ".join(f"{l}={a:.1f}%" for l, a in trend) + "\n")
-        lines.append(f"Accuracy **{'increased monotonically' if monotonic else 'did NOT increase monotonically'}** with size.\n")
-    best_oss = max(((l, a) for l, a in overall_by_label.items() if a is not None and not loaded[l]["commercial"]), key=lambda kv: kv[1], default=(None, None))
-    best_comm = max(((l, a) for l, a in overall_by_label.items() if a is not None and loaded[l]["commercial"]), key=lambda kv: kv[1], default=(None, None))
-    if best_oss[0] and best_comm[0]:
-        lines.append(f"\nBest open-source model: **{best_oss[0]}** ({best_oss[1]:.1f}%). "
-                      f"Best commercial/API model so far: **{best_comm[0]}** ({best_comm[1]:.1f}%).\n")
+    lines.append("## Provider / family comparison\n")
+    for fam in ["GPT-6", "Claude Haiku", "Claude Opus"]:
+        fam_acc = {l: overall_by_label[l] for l, info in loaded.items() if info["family"] == fam and overall_by_label.get(l) is not None}
+        if fam_acc:
+            lines.append(f"- **{fam}**: " + ", ".join(f"{l}={a:.1f}%" for l, a in fam_acc.items()) + "\n")
+    best_overall = max(((l, a) for l, a in overall_by_label.items() if a is not None), key=lambda kv: kv[1], default=(None, None))
+    worst_overall = min(((l, a) for l, a in overall_by_label.items() if a is not None), key=lambda kv: kv[1], default=(None, None))
+    if best_overall[0]:
+        lines.append(f"\nBest overall: **{best_overall[0]}** ({best_overall[1]:.1f}%). "
+                      f"Lowest: **{worst_overall[0]}** ({worst_overall[1]:.1f}%).\n")
     if any(l.startswith("Claude Haiku") for l in loaded):
         lines.append("\n**Caveat:** Claude Haiku is in the same model family as the question generator "
                       "(Claude Sonnet 5). It may have an advantage the other answering models don't have "
@@ -454,13 +452,10 @@ def main():
     if ranked:
         lo = overall_by_label[ranked[-1]]
         hi = overall_by_label[ranked[0]]
-        lines.append(f"> Across {len(loaded)} model/setting combinations (open-source models on a single "
-                      f"NVIDIA RTX 4000 Ada GPU, plus commercial API models), accuracy on {n_gt} "
+        lines.append(f"> Across {len(loaded)} commercial model/setting combinations (OpenAI and Anthropic, "
+                      f"via each provider's batch API), accuracy on {n_gt} "
                       f"execution-verified AI-generated comprehension questions about real student code ranged "
                       f"from {lo:.0f}% ({ranked[-1]}) to {hi:.0f}% ({ranked[0]}).\n")
-    if qwen_acc:
-        lines.append(f"> Within the Qwen2.5-Coder family, accuracy rose from "
-                      f"{trend[0][1]:.0f}% ({trend[0][0]}) to {trend[-1][1]:.0f}% ({trend[-1][0]}) as model size increased.\n")
     lines.append(f"> The question generator (Claude Sonnet 5), operating one-pass with no self-checking, "
                   f"produced {n_key_wrong} incorrect answer keys out of {n_gt} verifiable questions "
                   f"({100*n_key_wrong/n_gt:.1f}%) across 8 comprehension categories.\n")
