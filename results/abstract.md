@@ -25,7 +25,10 @@ from 79.1% to 93.0% and Claude Haiku 5.5 from 58.5% to 94.1% when enabled.
 Tracing loop iterations and branch execution were the hardest categories
 (67–68% average accuracy) across every model; tracking how many times a
 function is called and reading simple data-structure state were easiest
-(85–89%). Surprisingly, Claude Opus 5 — despite being a larger, costlier
-model — underperformed every other commercial model (58–61%) and left
-36–40% of answers unparseable, writing out visible step-by-step reasoning
-text even with "thinking" formally disabled, instead of answering directly.
+(85–89%). Surprisingly, Claude Opus 5 scored lowest of all seven (58–61%)
+— but mostly because 36–40% of its responses could not be read as an
+answer: instead of picking a letter, it wrote out its reasoning step by
+step even with thinking formally disabled. Restricted to only the
+responses it did answer cleanly, its accuracy was 93.6–95.6% — on par
+with the best-performing models — showing the low headline score reflects
+a format-compliance failure, not a comprehension deficit.

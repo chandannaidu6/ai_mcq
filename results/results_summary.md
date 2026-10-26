@@ -5,8 +5,10 @@
 Scope note: this report covers only the **commercial API models**
 (OpenAI, Anthropic). The open-source models run earlier in this project
 (Qwen2.5-Coder 3B/7B/14B, DeepSeek-Coder-V2-Lite-Instruct) answered the
-same 996 questions and are documented in `summary_v2.md` / git history, but
-are excluded from the poster's comparison per the project's final scope.
+same 996 questions; their results were removed from `results/` and
+`summary_v2.md` at the user's request once the commercial comparison was
+complete, and remain recoverable from git history only, per the project's
+final scope.
 
 ## Overall accuracy (ranked)
 
@@ -19,6 +21,11 @@ are excluded from the poster's comparison per the project's final scope.
 | 5 | Claude Opus 5 (thinking: on) | 60.6% | 634/996 (63.7%) |
 | 6 | Claude Haiku 5.5 (thinking: off) | 58.5% | 806/996 (80.9%) |
 | 7 | Claude Opus 5 (thinking: off) | 58.1% | 601/996 (60.3%) |
+
+**Read ranks 5 and 7 with the "Valid answers" column, not in isolation** —
+Claude Opus 5's low rank is driven almost entirely by it failing to produce
+a parseable letter on 36–40% of questions, not by weaker comprehension; see
+"A genuine surprise" below for the corrected, like-for-like comparison.
 
 Scored against execution ground truth on the 759/996 questions (76.2%)
 that had a verifiable answer. All figures: `results/cost_log.csv`,
@@ -113,12 +120,30 @@ the raw responses shows why: even with `thinking` formally disabled, Opus
 5 frequently writes an explicit `<thinking>...</thinking>`-style trace
 directly into its visible answer text rather than emitting a bare letter,
 and with a deliberately tight 200-token budget for the "off" condition,
-many of these traces never reach a final answer before being cut off. This
-is a genuine behavioral finding, not a scoring artifact: Opus 5 is simply
-far less willing than Haiku 5.5 or the GPT-6 models to skip its reasoning
-process when asked to. The `results/poster_validity_vs_accuracy.png`
-chart shows this pattern cleanly — invalid-answer rate and (low) accuracy
-track together almost linearly across all 7 settings.
+many of these traces never reach a final answer before being cut off.
+
+**This behavior is real, but the low headline score is misleading taken
+at face value.** We re-scored each Opus 5 setting using only the subset of
+responses that *did* resolve to a clean letter:
+
+| Setting | Headline accuracy (all 996) | Accuracy on parseable answers only |
+|---|---|---|
+| Claude Opus 5, thinking off | 58.1% | **93.6%** (441/471) |
+| Claude Opus 5, thinking on | 60.6% | **95.6%** (460/481) |
+| *(for comparison)* Claude Haiku 5.5, thinking on | 94.1% | 94.4% (714/756) |
+
+Once you control for format compliance, **Opus 5's actual code comprehension
+is at parity with the best-performing models in this study, not the
+weakest.** The scoring treats every unparseable response as wrong (correctly,
+per the methodology — an answer a downstream user can't read is a real
+failure), so the low aggregate number is mostly a measurement of
+*instruction-following under a tight token budget*, not of comprehension.
+The right one-line summary: Opus 5 understands the code about as well as
+the best models tested, but on this task frequently refuses to compress
+that understanding into a bare letter when asked to. The
+`results/poster_validity_vs_accuracy.png` chart shows the raw pattern
+(low parseability tracking with low aggregate accuracy); this table is the
+reason not to read that chart as "Opus 5 comprehends code worse."
 
 ## Generator reliability (how good was the AI-generated-MCQ process itself?)
 

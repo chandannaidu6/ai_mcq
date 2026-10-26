@@ -89,6 +89,25 @@ def compute_accuracy(data):
     return overall, by_cat, n_valid, len(results), total
 
 
+def compute_accuracy_among_valid(data):
+    """Accuracy restricted to responses that DID resolve to a parseable
+    letter (excludes invalid responses from both numerator and
+    denominator, unlike the headline `compute_accuracy`, which counts an
+    invalid response as wrong). Separates 'did the model understand the
+    code' from 'did the model follow the single-letter format' -- a
+    low-validity model can otherwise look like it comprehends worse than
+    it does, when it's really a format-compliance problem."""
+    n_valid_with_gt = n_valid_correct = 0
+    for r in data["results"]:
+        if r.get("ground_truth_option") is None or not r.get("is_valid"):
+            continue
+        n_valid_with_gt += 1
+        if r.get("is_correct"):
+            n_valid_correct += 1
+    pct = 100.0 * n_valid_correct / n_valid_with_gt if n_valid_with_gt else None
+    return pct, n_valid_correct, n_valid_with_gt
+
+
 def write_csv(questions, loaded):
     out_path = os.path.join(RESULTS_DIR, "questions_v2.csv")
     labels = list(loaded.keys())
@@ -409,6 +428,22 @@ def main():
             lines.append(f"| {label} | n/a (0 answers so far) |")
             continue
         lines.append(f"| {label} | {n_tot - n_valid}/{n_tot} ({100*(n_tot-n_valid)/n_tot:.1f}%) |")
+    lines.append("")
+
+    lines.append("## Accuracy among parseable answers only\n")
+    lines.append("The headline ranking above scores an unparseable response as wrong (correct "
+                  "methodology -- an answer a downstream reader can't parse is a real failure). But for a "
+                  "model with a high invalid rate, that conflates 'got it wrong' with 'didn't answer in the "
+                  "required format', understating its actual comprehension. This table restricts to only the "
+                  "responses that resolved to a clean A-D letter:\n")
+    lines.append("| Model/setting | Headline accuracy | Accuracy on parseable answers only |")
+    lines.append("|---|---|---|")
+    for label, info in loaded.items():
+        headline = overall_by_label.get(label)
+        valid_pct, n_correct, n_with_gt = compute_accuracy_among_valid(info["data"])
+        h_str = f"{headline:.1f}%" if headline is not None else "n/a"
+        v_str = f"{valid_pct:.1f}% ({n_correct}/{n_with_gt})" if valid_pct is not None else "n/a"
+        lines.append(f"| {label} | {h_str} | {v_str} |")
     lines.append("")
 
     lines.append("## Spend (from results/cost_log.csv and provider dashboards)\n")

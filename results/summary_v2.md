@@ -106,6 +106,20 @@ Best overall: **GPT-6 Astra (reasoning: low)** (94.9%). Lowest: **Claude Opus 5 
 | Claude Opus 5 (thinking: off) | 395/996 (39.7%) |
 | Claude Opus 5 (thinking: on) | 362/996 (36.3%) |
 
+## Accuracy among parseable answers only
+
+The headline ranking above scores an unparseable response as wrong (correct methodology -- an answer a downstream reader can't parse is a real failure). But for a model with a high invalid rate, that conflates 'got it wrong' with 'didn't answer in the required format', understating its actual comprehension. This table restricts to only the responses that resolved to a clean A-D letter:
+
+| Model/setting | Headline accuracy | Accuracy on parseable answers only |
+|---|---|---|
+| GPT-6 Luna (reasoning: none) | 79.1% | 79.3% (600/757) |
+| GPT-6 Luna (reasoning: medium) | 93.0% | 93.1% (706/758) |
+| GPT-6 Astra (reasoning: low) | 94.9% | 94.9% (720/759) |
+| Claude Haiku 5.5 (thinking: off) | 58.5% | 69.1% (444/643) |
+| Claude Haiku 5.5 (thinking: on) | 94.1% | 94.4% (714/756) |
+| Claude Opus 5 (thinking: off) | 58.1% | 93.6% (441/471) |
+| Claude Opus 5 (thinking: on) | 60.6% | 95.6% (460/481) |
+
 ## Spend (from results/cost_log.csv and provider dashboards)
 
 ```

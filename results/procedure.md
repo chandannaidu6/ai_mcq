@@ -37,6 +37,43 @@ than being silently corrected.
 This produced **996 questions** (4 options each, one marked as the
 generator's best guess at the correct answer).
 
+### 2a. How each category's verification snippet ("checker") was built
+
+Every question carries a `verification_code` snippet that, when run after
+the student's (or a modified copy of the student's) code, prints the true
+answer — this is the checker used in Step 3. Two shared primitives underlie
+all 8 categories:
+
+- **`build_call_fn_source()`** — AST-rewrites a dataset test's final
+  `print(expr)` statement into `return expr`, producing a zero-argument
+  function `__cf()` that can be executed under a tracer.
+- **Three generic tracers**, all built on Python's `sys.settrace`:
+  `__trace_hits(line, __cf)` counts how many times a given source line
+  executes during the call; `__trace_lines([line1, line2], __cf)` does the
+  same for several lines at once; `__trace_var(line, name, occurrence,
+  __cf)` snapshots a local variable's value (via `copy.deepcopy`, so later
+  mutation of the same object can't corrupt the snapshot) the Nth time a
+  given line is reached.
+
+| Category | Checker construction |
+|---|---|
+| `output` | The dataset's own real `testcode` from `tests.csv`, run **verbatim** — no synthesis. |
+| `data_structure_state` | Same as `output`, restricted to candidate tests whose `expected` value parses (`ast.literal_eval`) as a `list` or `dict`. |
+| `edge_case` | If a dataset test already looks like an edge case (literal markers such as `[]`, `= None`, `(0,`) in its testcode, run it verbatim under `try/except`, printing the real output or `"Raises " + type(e).__name__`. Otherwise, AST-mutate one literal argument of an existing test to an edge value (list→`[]`, int→`0`, str→`""`) and run that under the same `try/except`. |
+| `code_modification` | Run the dataset's real testcode against a **mechanically altered copy of the student's code**: the first comparison operator found is flipped (`<`↔`>`, `==`↔`!=`, etc. via `ast.NodeTransformer`); if none exists, the first non-trivial integer literal is incremented by 1. |
+| `loop_trace` | `build_call_fn_source` + `print(__trace_hits(line, __cf))`, where `line` is the first statement inside the function's first `for`/`while` loop (located via AST). |
+| `call_count` | Same pattern, with `line` = the function's own first body statement, so each invocation (including every recursive re-entry) re-executes it exactly once — the hit count *is* the call count. |
+| `variable_state` | Same pattern, `print(__trace_var(return_line, var_name, 1, __cf))`, where `var_name` is the last simple `x = ...` assignment found (via AST) textually before the function's `return`. |
+| `control_flow` | Same pattern, `__trace_lines([if_body_line, else_body_line], __cf)` on the first `if` statement found in the function — whichever line is hit identifies the branch taken, and the checker prints that branch's text label. |
+
+For the four categories without a pre-existing dataset test to ground them
+(`loop_trace`, `control_flow`, `call_count`, `variable_state`, and the
+fallback path of `edge_case`), the generator's proposed *answer* is a naive,
+unverified heuristic guess (e.g. "assume no recursion" for `call_count`),
+while the *checker* itself always genuinely executes the real code via
+`sys.settrace` — the guess and the checker are independent, which is
+exactly why Step 3 can and does catch the generator's guess being wrong.
+
 ## 3. Execution-based verification
 
 Every question's true answer was established by actually running the
@@ -73,20 +110,29 @@ letter. Responses were parsed with a regex tolerant of common formats
 ("A", "(A)", "Answer: A"); anything that didn't resolve to A–D was scored
 as invalid, separately from wrong.
 
-Models spanned open-source (run locally via vLLM on a single NVIDIA RTX
-4000 Ada, 20 GB VRAM) and commercial API models (OpenAI and Anthropic,
-via their batch APIs), each at **temperature 0**, and — where the model
-supports it — at both a minimal/disabled and an enabled reasoning/thinking
-setting, to isolate the effect of reasoning on this task.
+The final comparison evaluates **7 commercial model/settings** across two
+providers — OpenAI (GPT-6 Luna at minimal and enabled reasoning; GPT-6
+Astra, the top-of-family model by price, at its minimum available
+reasoning setting) and Anthropic (Claude Haiku 5.5 and Claude Opus 5, each
+with thinking disabled and enabled) — each called at **temperature 0**
+via the provider's batch API. (An earlier phase of this project also ran
+4 open-source models locally via vLLM on a single NVIDIA RTX 4000 Ada GPU
+for comparison; those results are not part of the final commercial-only
+comparison reported here and were removed from `results/` per request,
+though the answering pipeline that produced them is unchanged and
+re-runnable.)
 
 ## 5. Budget discipline (API models)
 
 For every paid model/setting, real token usage was measured on a 20-question
 sample *before* committing to the full run, and the full-scale cost was
 projected from that measurement (never estimated from pricing alone). One
-candidate model (a maximum-reasoning flagship) was found to cost roughly
-9× the available budget with no cheaper mode available and was dropped in
-favor of a comparably strong but affordable alternative in the same model
-family. All paid calls used each provider's batch API (50% discount);
-real per-call token usage was logged throughout, and the running total was
-checked against the budget before every new submission.
+candidate model (`gpt-5.5-pro`, OpenAI's flagship reasoning model, which
+only accepts medium/high/xhigh reasoning effort — no cheaper mode) was
+projected at roughly **9× the available budget (~$84)** on this basis and
+was dropped before any full run, in favor of `gpt-6-astra` — a comparably
+strong but far more affordable model in the same family. All paid calls
+used each provider's batch API (50% discount); real per-call token usage
+was logged throughout (`results/cost_log.csv`), and the running total was
+checked against the budget before every new submission. **Actual total
+spend across both providers: $6.78**, against a combined $10 cap.
